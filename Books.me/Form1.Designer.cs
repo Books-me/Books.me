@@ -57,16 +57,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(194, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.Size = new System.Drawing.Size(101, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "mitio";
+            this.label2.Text = "Az sum nenormalnik";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(847, 483);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
