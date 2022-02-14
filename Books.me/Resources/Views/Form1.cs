@@ -13,7 +13,7 @@ using MySql.Data.MySqlClient;
 
 namespace Books.me
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
 
         private MySqlConnection conn;
@@ -22,7 +22,7 @@ namespace Books.me
         private string uid;
         private string password;
 
-        public Form1()
+        public LoginForm()
         {
             server = "sql11.freesqldatabase.com";
             database = "sql11472544";
@@ -36,15 +36,15 @@ namespace Books.me
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
-            string user = textBox1.Text;
-            string password = textBox2.Text;
+            string user = txtUsername.Text;
+            string password = txtPass.Text;
             if (IsLogin(user, password))
             {
                 MessageBox.Show($"Welcome {user} !");
@@ -55,21 +55,23 @@ namespace Books.me
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+       
+
+        private void registerButton_Click_1(object sender, EventArgs e)
         {
-            string user = textBox1.Text;
-            string password = textBox2.Text;
+            string user = txtUsername.Text;
+            string password = txtPass.Text;
             if (Register(user, password))
             {
-                MessageBox.Show($"User {user}has been created!");
+                MessageBox.Show($"{user}has been created!");
             }
             else
             {
-                MessageBox.Show($"User {user} has never been created!");
+                MessageBox.Show($"{user} has never been created!");
             }
-            
 
         }
+
         public bool Register(string user, string pass)
         {
             string query = $"INSERT INTO uinfo (id,username,password) VALUES ('','{user}', '{pass}');";
@@ -142,9 +144,6 @@ namespace Books.me
         }
 
 
-
-
-
         private bool OpenConnection()
         {
             try
@@ -166,6 +165,26 @@ namespace Books.me
                 }
                 return false;
             }
+        }
+
+        private void Header_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
