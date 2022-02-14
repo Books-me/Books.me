@@ -36,12 +36,17 @@
             this.Header = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.passIcon = new System.Windows.Forms.PictureBox();
-            this.profileIcon = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.registerButton = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
+            this.clearLabel = new System.Windows.Forms.Label();
+            this.waringLabel = new System.Windows.Forms.Label();
+            this.switchLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.passIcon = new System.Windows.Forms.PictureBox();
+            this.profileIcon = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileIcon)).BeginInit();
             this.SuspendLayout();
@@ -53,12 +58,13 @@
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(504, 399);
+            this.loginButton.Location = new System.Drawing.Point(504, 400);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(250, 34);
             this.loginButton.TabIndex = 0;
-            this.loginButton.Text = "LOG IN";
+            this.loginButton.Text = "SIGN IN";
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Visible = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // txtUsername
@@ -126,6 +132,93 @@
             this.panel3.Size = new System.Drawing.Size(250, 1);
             this.panel3.TabIndex = 8;
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.CausesValidation = false;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.label2.Location = new System.Drawing.Point(504, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(250, 104);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "WELCOME TO BOOKS.ME";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // registerButton
+            // 
+            this.registerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.registerButton.FlatAppearance.BorderSize = 0;
+            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerButton.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerButton.ForeColor = System.Drawing.Color.White;
+            this.registerButton.Location = new System.Drawing.Point(504, 400);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(250, 34);
+            this.registerButton.TabIndex = 9;
+            this.registerButton.Text = "SIGN UP";
+            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click_1);
+            // 
+            // txtPass
+            // 
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.txtPass.Location = new System.Drawing.Point(535, 313);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(219, 24);
+            this.txtPass.TabIndex = 10;
+            this.txtPass.UseSystemPasswordChar = true;
+            // 
+            // clearLabel
+            // 
+            this.clearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.clearLabel.Location = new System.Drawing.Point(701, 347);
+            this.clearLabel.Name = "clearLabel";
+            this.clearLabel.Size = new System.Drawing.Size(53, 23);
+            this.clearLabel.TabIndex = 11;
+            this.clearLabel.Text = "Clear";
+            this.clearLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.clearLabel.Click += new System.EventHandler(this.clearLabel_Click);
+            // 
+            // waringLabel
+            // 
+            this.waringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waringLabel.ForeColor = System.Drawing.Color.Red;
+            this.waringLabel.Location = new System.Drawing.Point(532, 175);
+            this.waringLabel.Name = "waringLabel";
+            this.waringLabel.Size = new System.Drawing.Size(186, 44);
+            this.waringLabel.TabIndex = 12;
+            this.waringLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.waringLabel.Click += new System.EventHandler(this.waringLabel_Click);
+            // 
+            // switchLabel
+            // 
+            this.switchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.switchLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.switchLabel.Location = new System.Drawing.Point(504, 437);
+            this.switchLabel.Name = "switchLabel";
+            this.switchLabel.Size = new System.Drawing.Size(250, 36);
+            this.switchLabel.TabIndex = 13;
+            this.switchLabel.Text = "Already have an account? \r\nSign in here";
+            this.switchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.switchLabel.Click += new System.EventHandler(this.switchLabel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Books.me.Properties.Resources.close;
+            this.pictureBox1.Location = new System.Drawing.Point(880, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // passIcon
             // 
             this.passIcon.Image = ((System.Drawing.Image)(resources.GetObject("passIcon.Image")));
@@ -146,52 +239,16 @@
             this.profileIcon.TabIndex = 5;
             this.profileIcon.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.CausesValidation = false;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.label2.Location = new System.Drawing.Point(496, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 104);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "WELCOME TO BOOKS.ME";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // registerButton
-            // 
-            this.registerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.registerButton.FlatAppearance.BorderSize = 0;
-            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.Location = new System.Drawing.Point(504, 439);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(250, 34);
-            this.registerButton.TabIndex = 9;
-            this.registerButton.Text = "REGISTER";
-            this.registerButton.UseVisualStyleBackColor = false;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click_1);
-            // 
-            // txtPass
-            // 
-            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.txtPass.Location = new System.Drawing.Point(535, 312);
-            this.txtPass.Multiline = true;
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(219, 29);
-            this.txtPass.TabIndex = 10;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(907, 578);
+            this.Controls.Add(this.clearLabel);
+            this.Controls.Add(this.switchLabel);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.waringLabel);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.label2);
@@ -202,13 +259,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.loginButton);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "ss";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileIcon)).EndInit();
             this.ResumeLayout(false);
@@ -230,6 +288,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label clearLabel;
+        private System.Windows.Forms.Label waringLabel;
+        private System.Windows.Forms.Label switchLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

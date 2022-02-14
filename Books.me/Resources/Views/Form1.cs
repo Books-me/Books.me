@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
+using System.Runtime.InteropServices;
 
 
 namespace Books.me
@@ -16,6 +16,18 @@ namespace Books.me
     public partial class LoginForm : Form
     {
 
+        //rounded corners
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
+        
         private MySqlConnection conn;
         private string server;
         private string database;
@@ -34,6 +46,10 @@ namespace Books.me
             conn =new MySqlConnection(connString);
 
             InitializeComponent();
+
+
+            //this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -49,9 +65,13 @@ namespace Books.me
             {
                 MessageBox.Show($"Welcome {user} !");
             }
+            if (user == "" && password == "")
+            {
+                waringLabel.Text = "Please enter credentials!";
+            }
             else
             {
-                MessageBox.Show($"{user} does not exist or password is incorrect!");
+                waringLabel.Text = $"{user} non-existent or incorrect credentials!";
             }
         }
 
@@ -63,7 +83,7 @@ namespace Books.me
             string password = txtPass.Text;
             if (Register(user, password))
             {
-                MessageBox.Show($"{user}has been created!");
+                MessageBox.Show($"{user}has been created!\n Log In your new account");
             }
             else
             {
@@ -185,6 +205,31 @@ namespace Books.me
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void clearLabel_Click(object sender, EventArgs e)
+        {
+            txtUsername.Clear();
+            txtPass.Clear();
+            txtUsername.Focus();    
+        }
+
+        private void waringLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void switchLabel_Click(object sender, EventArgs e)
+        {
+            loginButton.Visible=true;
+            registerButton.Visible = false;
+            switchLabel.Visible = false;
+            waringLabel.Text = "Sign in to your existing account";
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
