@@ -79,6 +79,7 @@
             this.txtUsername.Size = new System.Drawing.Size(219, 29);
             this.txtUsername.TabIndex = 2;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            
             // 
             // panel1
             // 
@@ -276,6 +277,7 @@
             this.Controls.Add(this.loginButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ss";
