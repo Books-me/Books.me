@@ -45,6 +45,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passIcon = new System.Windows.Forms.PictureBox();
             this.profileIcon = new System.Windows.Forms.PictureBox();
+            this.backToSignIn = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).BeginInit();
@@ -127,7 +128,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.panel3.Location = new System.Drawing.Point(504, 343);
+            this.panel3.Location = new System.Drawing.Point(504, 333);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 1);
             this.panel3.TabIndex = 8;
@@ -166,7 +167,7 @@
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.txtPass.Location = new System.Drawing.Point(535, 313);
+            this.txtPass.Location = new System.Drawing.Point(535, 303);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(219, 24);
@@ -177,7 +178,7 @@
             // 
             this.clearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.clearLabel.Location = new System.Drawing.Point(701, 347);
+            this.clearLabel.Location = new System.Drawing.Point(701, 337);
             this.clearLabel.Name = "clearLabel";
             this.clearLabel.Size = new System.Drawing.Size(53, 23);
             this.clearLabel.TabIndex = 11;
@@ -222,7 +223,7 @@
             // passIcon
             // 
             this.passIcon.Image = ((System.Drawing.Image)(resources.GetObject("passIcon.Image")));
-            this.passIcon.Location = new System.Drawing.Point(504, 312);
+            this.passIcon.Location = new System.Drawing.Point(504, 302);
             this.passIcon.Name = "passIcon";
             this.passIcon.Size = new System.Drawing.Size(25, 25);
             this.passIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -239,12 +240,26 @@
             this.profileIcon.TabIndex = 5;
             this.profileIcon.TabStop = false;
             // 
+            // backToSignIn
+            // 
+            this.backToSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.backToSignIn.Location = new System.Drawing.Point(504, 437);
+            this.backToSignIn.Name = "backToSignIn";
+            this.backToSignIn.Size = new System.Drawing.Size(250, 36);
+            this.backToSignIn.TabIndex = 15;
+            this.backToSignIn.Text = " ← Back to Sign Up";
+            this.backToSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.backToSignIn.Visible = false;
+            this.backToSignIn.Click += new System.EventHandler(this.backToSignIn_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(907, 578);
+            this.Controls.Add(this.backToSignIn);
             this.Controls.Add(this.clearLabel);
             this.Controls.Add(this.switchLabel);
             this.Controls.Add(this.pictureBox1);
@@ -292,6 +307,7 @@
         private System.Windows.Forms.Label waringLabel;
         private System.Windows.Forms.Label switchLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label backToSignIn;
     }
 }
 

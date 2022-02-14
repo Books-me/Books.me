@@ -64,15 +64,17 @@ namespace Books.me
             if (IsLogin(user, password))
             {
                 MessageBox.Show($"Welcome {user} !");
-            }
-            if (user == "" && password == "")
-            {
-                waringLabel.Text = "Please enter credentials!";
+               
             }
             else
             {
                 waringLabel.Text = $"{user} non-existent or incorrect credentials!";
             }
+            if (user == "" && password == "")
+            {
+                waringLabel.Text = "Please enter credentials!";
+            }
+            
         }
 
        
@@ -81,15 +83,31 @@ namespace Books.me
         {
             string user = txtUsername.Text;
             string password = txtPass.Text;
-            if (Register(user, password))
+
+            string query = $"SELECT * FROM uinfo WHERE username='{user}';";
+            //
+            if (query != null)
             {
-                MessageBox.Show($"{user}has been created!\n Log In your new account");
+                waringLabel.Text = "User already exists";
+                txtUsername.Clear();
+                txtPass.Clear();
+                txtUsername.Focus();
             }
             else
             {
-                MessageBox.Show($"{user} has never been created!");
+                if (Register(user, password))
+                {
+                    MessageBox.Show($"{user}has been created!\n Log In your new account");
+                }
+                else
+                {
+                    MessageBox.Show($"{user} has never been created!");
+                }
             }
-
+            
+            //check
+            
+            
         }
 
         public bool Register(string user, string pass)
@@ -211,7 +229,8 @@ namespace Books.me
         {
             txtUsername.Clear();
             txtPass.Clear();
-            txtUsername.Focus();    
+            txtUsername.Focus();
+            waringLabel.Text = "";
         }
 
         private void waringLabel_Click(object sender, EventArgs e)
@@ -224,12 +243,22 @@ namespace Books.me
             loginButton.Visible=true;
             registerButton.Visible = false;
             switchLabel.Visible = false;
+            backToSignIn.Visible = true;   
             waringLabel.Text = "Sign in to your existing account";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void backToSignIn_Click(object sender, EventArgs e)
+        {
+            loginButton.Visible = false;
+            registerButton.Visible = true;
+            switchLabel.Visible = true;
+            backToSignIn.Visible=false;
+            waringLabel.Text = "";
         }
     }
 }
