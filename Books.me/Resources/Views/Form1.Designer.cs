@@ -128,7 +128,7 @@
             // 
             // passIcon
             // 
-            this.passIcon.Image = global::Books.me.Properties.Resources.key;
+            this.passIcon.Image = ((System.Drawing.Image)(resources.GetObject("passIcon.Image")));
             this.passIcon.Location = new System.Drawing.Point(504, 312);
             this.passIcon.Name = "passIcon";
             this.passIcon.Size = new System.Drawing.Size(25, 25);
