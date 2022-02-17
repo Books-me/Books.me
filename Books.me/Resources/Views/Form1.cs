@@ -77,8 +77,6 @@ namespace Books.me
             }
         }
 
-
-
         private void registerButton_Click_1(object sender, EventArgs e)
         {
 
