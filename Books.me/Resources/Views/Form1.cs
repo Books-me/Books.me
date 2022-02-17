@@ -140,10 +140,11 @@ namespace Books.me
             {
                 if (OpenConnection())
                 {
-                    MySqlCommand cmd = new  MySqlCommand(query,conn);
+                    MySqlCommand cmd = new MySqlCommand(query,conn);
                     try
                     {
                         cmd.ExecuteNonQuery();
+                        conn.Close();
                         return true;
                     }
                     catch (Exception ex)
