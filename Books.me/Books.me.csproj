@@ -58,6 +58,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Controller\AesOperation.cs" />
     <Compile Include="Resources\Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,17 +101,13 @@
     <None Include="Resources\Views\key.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\Controller\" />
     <Folder Include="Resources\Model\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\key.png" />
+    <None Include="Resources\Views\pngtree-vector-plan11ning-icon-png-image_327954.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pngtree-vector-plan11ning-icon-png-image_327954.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close.png" />
+    <None Include="Resources\Views\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -78,8 +78,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(219, 29);
             this.txtUsername.TabIndex = 2;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
-            
             // 
             // panel1
             // 
@@ -146,7 +144,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "WELCOME TO BOOKS.ME";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // registerButton
             // 
@@ -166,12 +163,12 @@
             // txtPass
             // 
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.txtPass.Location = new System.Drawing.Point(535, 303);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(219, 24);
+            this.txtPass.Size = new System.Drawing.Size(219, 19);
             this.txtPass.TabIndex = 10;
             this.txtPass.UseSystemPasswordChar = true;
             // 
@@ -196,7 +193,6 @@
             this.waringLabel.Size = new System.Drawing.Size(186, 44);
             this.waringLabel.TabIndex = 12;
             this.waringLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.waringLabel.Click += new System.EventHandler(this.waringLabel_Click);
             // 
             // switchLabel
             // 
@@ -245,9 +241,9 @@
             // 
             this.backToSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backToSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.backToSignIn.Location = new System.Drawing.Point(504, 437);
+            this.backToSignIn.Location = new System.Drawing.Point(541, 437);
             this.backToSignIn.Name = "backToSignIn";
-            this.backToSignIn.Size = new System.Drawing.Size(250, 36);
+            this.backToSignIn.Size = new System.Drawing.Size(163, 36);
             this.backToSignIn.TabIndex = 15;
             this.backToSignIn.Text = " ← Back to Sign Up";
             this.backToSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

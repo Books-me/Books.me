@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
-
+using System.Security.Cryptography;
+using System.IO;
 
 namespace Books.me
 {
@@ -36,10 +37,10 @@ namespace Books.me
 
         public LoginForm()
         {
-            server = "sql11.freesqldatabase.com";
-            database = "sql11472544";
-            uid = "sql11472544";
-            password = "U399XUYDdH";
+            server = "server27.rdb.superhosting.bg";
+            database = "vitrini_booksme";
+            uid = "vitrini_books";
+            password = "ednodvetri";
 
             string connString;
             connString = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
@@ -74,27 +75,18 @@ namespace Books.me
             {
                 waringLabel.Text = "Please enter credentials!";
             }
-            
         }
 
-       
+
 
         private void registerButton_Click_1(object sender, EventArgs e)
         {
+
             string user = txtUsername.Text;
             string password = txtPass.Text;
 
             string query = $"SELECT * FROM uinfo WHERE username='{user}';";
-            //
-            if (query != null)
-            {
-                waringLabel.Text = "User already exists";
-                txtUsername.Clear();
-                txtPass.Clear();
-                txtUsername.Focus();
-            }
-            else
-            {
+            
                 if (Register(user, password))
                 {
                     MessageBox.Show($"{user}has been created!\n Log In your new account");
@@ -103,16 +95,47 @@ namespace Books.me
                 {
                     MessageBox.Show($"{user} has never been created!");
                 }
+
+        }
+        //encryption
+
+        public static string EncryptString(string key, string plainText)
+        {
+            byte[] iv = new byte[16];
+            byte[] array;
+
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = Encoding.UTF8.GetBytes(key);
+                aes.IV = iv;
+
+                ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
+
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter streamWriter = new StreamWriter((Stream)cryptoStream))
+                        {
+                            streamWriter.Write(plainText);
+                        }
+
+                        array = memoryStream.ToArray();
+                    }
+                }
             }
-            
-            //check
-            
-            
+
+            return Convert.ToBase64String(array);
         }
 
+        //
         public bool Register(string user, string pass)
         {
-            string query = $"INSERT INTO uinfo (id,username,password) VALUES ('','{user}', '{pass}');";
+            string key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var encryptedPassword = EncryptString(key, pass);
+
+            string query = $"INSERT INTO uinfo (id,username,password) VALUES ('','{user}', '{encryptedPassword}');";
             try
             {
                 if (OpenConnection())
@@ -145,11 +168,17 @@ namespace Books.me
 
         public  bool IsLogin(string user, string pass)
         {
-            string query = $"SELECT * FROM uinfo WHERE username='{user}' AND password= '{pass}';";
+
+            string key = "b14ca5898a4e4133bbce2ea2315a1916";
+
+            var encryptedPassword = EncryptString(key, pass);
+            
+            string query = $"SELECT * FROM uinfo WHERE username='{user}' AND password= '{encryptedPassword}';";
             try
             {
                 if (OpenConnection())
                 {
+                    conn.Ping();
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -172,6 +201,7 @@ namespace Books.me
                     conn.Close();
                     return false;
                 }
+                return true;
             }
             catch (Exception ex)
             {
@@ -179,6 +209,7 @@ namespace Books.me
                 conn.Close();
                 return false;
             }
+
         }
 
 
@@ -187,6 +218,7 @@ namespace Books.me
             try
             {
                 conn.Open();
+                
                 return true;
             }
             catch (MySqlException ex)
@@ -210,16 +242,6 @@ namespace Books.me
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -231,11 +253,6 @@ namespace Books.me
             txtPass.Clear();
             txtUsername.Focus();
             waringLabel.Text = "";
-        }
-
-        private void waringLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void switchLabel_Click(object sender, EventArgs e)
