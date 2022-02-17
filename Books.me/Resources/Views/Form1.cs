@@ -28,7 +28,7 @@ namespace Books.me
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
-        
+
         private MySqlConnection conn;
         private string server;
         private string database;
@@ -44,7 +44,7 @@ namespace Books.me
 
             string connString;
             connString = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
-            conn =new MySqlConnection(connString);
+            conn = new MySqlConnection(connString);
 
             InitializeComponent();
 
@@ -65,7 +65,7 @@ namespace Books.me
             if (IsLogin(user, password))
             {
                 MessageBox.Show($"Welcome {user} !");
-               
+
             }
             else
             {
@@ -77,6 +77,8 @@ namespace Books.me
             }
         }
 
+
+
         private void registerButton_Click_1(object sender, EventArgs e)
         {
 
@@ -84,15 +86,15 @@ namespace Books.me
             string password = txtPass.Text;
 
             string query = $"SELECT * FROM uinfo WHERE username='{user}';";
-            
-                if (Register(user, password))
-                {
-                    MessageBox.Show($"{user}has been created!\n Log In your new account");
-                }
-                else
-                {
-                    MessageBox.Show($"{user} has never been created!");
-                }
+
+            if (Register(user, password))
+            {
+                MessageBox.Show($"{user}has been created!\n Log In your new account");
+            }
+            else
+            {
+                MessageBox.Show($"{user} has never been created!");
+            }
 
         }
         //encryption
@@ -138,10 +140,11 @@ namespace Books.me
             {
                 if (OpenConnection())
                 {
-                    MySqlCommand cmd = new  MySqlCommand(query,conn);
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
                     try
                     {
                         cmd.ExecuteNonQuery();
+                        conn.Close();
                         return true;
                     }
                     catch (Exception ex)
@@ -149,7 +152,7 @@ namespace Books.me
 
                         return false;
                     }
-                    
+
                 }
                 else
                 {
@@ -164,13 +167,13 @@ namespace Books.me
             }
         }
 
-        public  bool IsLogin(string user, string pass)
+        public bool IsLogin(string user, string pass)
         {
 
             string key = "b14ca5898a4e4133bbce2ea2315a1916";
 
             var encryptedPassword = EncryptString(key, pass);
-            
+
             string query = $"SELECT * FROM uinfo WHERE username='{user}' AND password= '{encryptedPassword}';";
             try
             {
@@ -216,7 +219,7 @@ namespace Books.me
             try
             {
                 conn.Open();
-                
+
                 return true;
             }
             catch (MySqlException ex)
@@ -255,10 +258,10 @@ namespace Books.me
 
         private void switchLabel_Click(object sender, EventArgs e)
         {
-            loginButton.Visible=true;
+            loginButton.Visible = true;
             registerButton.Visible = false;
             switchLabel.Visible = false;
-            backToSignIn.Visible = true;   
+            backToSignIn.Visible = true;
             waringLabel.Text = "Sign in to your existing account";
         }
 
@@ -272,9 +275,9 @@ namespace Books.me
             loginButton.Visible = false;
             registerButton.Visible = true;
             switchLabel.Visible = true;
-            backToSignIn.Visible=false;
+            backToSignIn.Visible = false;
             waringLabel.Text = "";
         }
-        
+
     }
 }
