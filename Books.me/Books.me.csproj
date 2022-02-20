@@ -109,11 +109,5 @@
   <ItemGroup>
     <None Include="Resources\Views\close.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hidden41.png" />
-    <Content Include="Resources\view.png" />
-    <None Include="Resources\view1.png" />
-    <Content Include="Resources\Views\view.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
