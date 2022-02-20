@@ -42,11 +42,15 @@
             this.clearLabel = new System.Windows.Forms.Label();
             this.waringLabel = new System.Windows.Forms.Label();
             this.switchLabel = new System.Windows.Forms.Label();
+            this.backToSignIn = new System.Windows.Forms.Label();
+            this.hidePassword = new System.Windows.Forms.PictureBox();
+            this.showPass = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passIcon = new System.Windows.Forms.PictureBox();
             this.profileIcon = new System.Windows.Forms.PictureBox();
-            this.backToSignIn = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileIcon)).BeginInit();
@@ -167,7 +171,6 @@
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.txtPass.Location = new System.Drawing.Point(535, 303);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(219, 19);
             this.txtPass.TabIndex = 10;
             this.txtPass.UseSystemPasswordChar = true;
@@ -206,6 +209,41 @@
             this.switchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.switchLabel.Click += new System.EventHandler(this.switchLabel_Click);
             // 
+            // backToSignIn
+            // 
+            this.backToSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.backToSignIn.Location = new System.Drawing.Point(541, 437);
+            this.backToSignIn.Name = "backToSignIn";
+            this.backToSignIn.Size = new System.Drawing.Size(163, 36);
+            this.backToSignIn.TabIndex = 15;
+            this.backToSignIn.Text = " ← Back to Sign Up";
+            this.backToSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.backToSignIn.Visible = false;
+            this.backToSignIn.Click += new System.EventHandler(this.backToSignIn_Click);
+            // 
+            // hidePassword
+            // 
+            this.hidePassword.Image = global::Books.me.Properties.Resources.hidden41;
+            this.hidePassword.Location = new System.Drawing.Point(729, 302);
+            this.hidePassword.Name = "hidePassword";
+            this.hidePassword.Size = new System.Drawing.Size(25, 25);
+            this.hidePassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hidePassword.TabIndex = 16;
+            this.hidePassword.TabStop = false;
+            this.hidePassword.Click += new System.EventHandler(this.hidePassword_Click);
+            // 
+            // showPass
+            // 
+            this.showPass.Image = global::Books.me.Properties.Resources.view;
+            this.showPass.Location = new System.Drawing.Point(729, 302);
+            this.showPass.Name = "showPass";
+            this.showPass.Size = new System.Drawing.Size(25, 25);
+            this.showPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.showPass.TabIndex = 17;
+            this.showPass.TabStop = false;
+            this.showPass.Click += new System.EventHandler(this.showPass_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Books.me.Properties.Resources.close;
@@ -237,25 +275,14 @@
             this.profileIcon.TabIndex = 5;
             this.profileIcon.TabStop = false;
             // 
-            // backToSignIn
-            // 
-            this.backToSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.backToSignIn.Location = new System.Drawing.Point(541, 437);
-            this.backToSignIn.Name = "backToSignIn";
-            this.backToSignIn.Size = new System.Drawing.Size(163, 36);
-            this.backToSignIn.TabIndex = 15;
-            this.backToSignIn.Text = " ← Back to Sign Up";
-            this.backToSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.backToSignIn.Visible = false;
-            this.backToSignIn.Click += new System.EventHandler(this.backToSignIn_Click);
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(907, 578);
+            this.Controls.Add(this.hidePassword);
+            this.Controls.Add(this.showPass);
             this.Controls.Add(this.backToSignIn);
             this.Controls.Add(this.clearLabel);
             this.Controls.Add(this.switchLabel);
@@ -279,6 +306,8 @@
             this.Text = "ss";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hidePassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileIcon)).EndInit();
@@ -306,6 +335,8 @@
         private System.Windows.Forms.Label switchLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label backToSignIn;
+        private System.Windows.Forms.PictureBox hidePassword;
+        private System.Windows.Forms.PictureBox showPass;
     }
 }
 

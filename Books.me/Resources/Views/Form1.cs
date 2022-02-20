@@ -47,9 +47,7 @@ namespace Books.me
             conn = new MySqlConnection(connString);
 
             InitializeComponent();
-
-
-            //this.FormBorderStyle = FormBorderStyle.None;
+           
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
@@ -60,6 +58,7 @@ namespace Books.me
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+
             string user = txtUsername.Text;
             string password = txtPass.Text;
             if (IsLogin(user, password))
@@ -73,11 +72,11 @@ namespace Books.me
             }
             if (user == "" && password == "")
             {
+                waringLabel.ForeColor = Color.Red;
                 waringLabel.Text = "Please enter credentials!";
             }
+
         }
-
-
 
         private void registerButton_Click_1(object sender, EventArgs e)
         {
@@ -89,16 +88,17 @@ namespace Books.me
 
             if (Register(user, password))
             {
-                MessageBox.Show($"{user}has been created!\n Log In your new account");
+                waringLabel.ForeColor = Color.Green;
+                waringLabel.Text = $"{user}has been created!\n Log In your new account";
             }
             else
             {
-                MessageBox.Show($"{user} has never been created!");
+                waringLabel.Text = $"This username is taken!";
             }
 
         }
-        //encryption
 
+        //encryption
         public static string EncryptString(string key, string plainText)
         {
             byte[] iv = new byte[16];
@@ -119,16 +119,13 @@ namespace Books.me
                         {
                             streamWriter.Write(plainText);
                         }
-
                         array = memoryStream.ToArray();
                     }
                 }
             }
-
             return Convert.ToBase64String(array);
         }
-
-        //
+ 
         public bool Register(string user, string pass)
         {
             string key = "b14ca5898a4e4133bbce2ea2315a1916";
@@ -152,7 +149,6 @@ namespace Books.me
 
                         return false;
                     }
-
                 }
                 else
                 {
@@ -171,9 +167,7 @@ namespace Books.me
         {
 
             string key = "b14ca5898a4e4133bbce2ea2315a1916";
-
             var encryptedPassword = EncryptString(key, pass);
-
             string query = $"SELECT * FROM uinfo WHERE username='{user}' AND password= '{encryptedPassword}';";
             try
             {
@@ -210,9 +204,7 @@ namespace Books.me
                 conn.Close();
                 return false;
             }
-
         }
-
 
         private bool OpenConnection()
         {
@@ -224,7 +216,6 @@ namespace Books.me
             }
             catch (MySqlException ex)
             {
-
                 switch (ex.Number)
                 {
                     case 0:
@@ -242,12 +233,10 @@ namespace Books.me
         {
 
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void clearLabel_Click(object sender, EventArgs e)
         {
             txtUsername.Clear();
@@ -255,21 +244,19 @@ namespace Books.me
             txtUsername.Focus();
             waringLabel.Text = "";
         }
-
         private void switchLabel_Click(object sender, EventArgs e)
         {
             loginButton.Visible = true;
             registerButton.Visible = false;
             switchLabel.Visible = false;
             backToSignIn.Visible = true;
+            waringLabel.ForeColor = Color.Green;
             waringLabel.Text = "Sign in to your existing account";
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void backToSignIn_Click(object sender, EventArgs e)
         {
             loginButton.Visible = false;
@@ -278,6 +265,16 @@ namespace Books.me
             backToSignIn.Visible = false;
             waringLabel.Text = "";
         }
-
+        private void showPass_Click(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = true;
+            showPass.Visible = true;
+            hidePassword.Visible = true;
+        }
+        private void hidePassword_Click(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = false;
+            hidePassword.Visible = false;
+        }
     }
 }
