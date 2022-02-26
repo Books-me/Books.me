@@ -58,17 +58,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Controller\AesOperation.cs" />
-    <Compile Include="Resources\Views\Form1.cs">
+    <Compile Include="Resources\Controller\RegisterLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Resources\Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Resources\Controller\RegisterLoginForm.Designer.cs">
+      <DependentUpon>RegisterLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Resources\Views\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Resources\Models\DatabaseConnection.cs" />
+    <Compile Include="Resources\Models\User.cs" />
+    <EmbeddedResource Include="Resources\Controller\RegisterLoginForm.resx">
+      <DependentUpon>RegisterLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,9 +101,7 @@
   <ItemGroup>
     <None Include="Resources\Views\key.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Views\pngtree-vector-plan11ning-icon-png-image_327954.jpg" />
   </ItemGroup>

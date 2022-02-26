@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.IO;
+using Books.me.Resources.Models;
 
 namespace Books.me
 {
@@ -28,24 +29,10 @@ namespace Books.me
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
-
-        private MySqlConnection conn;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
-
+        private DatabaseConnection databaseConnection;
         public LoginForm()
         {
-            server = "server27.rdb.superhosting.bg";
-            database = "vitrini_booksme";
-            uid = "vitrini_books";
-            password = "ednodvetri";
-
-            string connString;
-            connString = $"SERVER={server};DATABASE={database};UID={uid};PASSWORD={password};";
-            conn = new MySqlConnection(connString);
-
+            databaseConnection = new DatabaseConnection();
             InitializeComponent();
            
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -58,19 +45,16 @@ namespace Books.me
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-
-            string user = txtUsername.Text;
-            string password = txtPass.Text;
-            if (IsLogin(user, password))
+            User user = new User(txtUsername.Text, txtPass.Text);
+            if (IsLogin(user.Username, user.Password))
             {
-                MessageBox.Show($"Welcome {user} !");
-
+                waringLabel.Text = $"{user.Username} is logged in";
             }
             else
             {
-                waringLabel.Text = $"{user} non-existent or incorrect credentials!";
+                waringLabel.Text = $"{user.Username} non-existent or incorrect credentials!";
             }
-            if (user == "" && password == "")
+            if (user.Username == "" && user.Password == "")
             {
                 waringLabel.ForeColor = Color.Red;
                 waringLabel.Text = "Please enter credentials!";
@@ -80,16 +64,13 @@ namespace Books.me
 
         private void registerButton_Click_1(object sender, EventArgs e)
         {
-
-            string user = txtUsername.Text;
-            string password = txtPass.Text;
-
+            User user = new User(txtUsername.Text, txtPass.Text);
             string query = $"SELECT * FROM uinfo WHERE username='{user}';";
 
-            if (Register(user, password))
+            if (Register(user.Username, user.Password))
             {
                 waringLabel.ForeColor = Color.Green;
-                waringLabel.Text = $"{user}has been created!\n Log In your new account";
+                waringLabel.Text = $"{user.Username}has been created!\n Log In your new account";
             }
             else
             {
@@ -135,13 +116,13 @@ namespace Books.me
             string query = $"INSERT INTO uinfo (id,username,password) VALUES ('','{user}', '{encryptedPassword}');";
             try
             {
-                if (OpenConnection())
+                if (databaseConnection.OpenConnection())
                 {
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
                     try
                     {
                         cmd.ExecuteNonQuery();
-                        conn.Close();
+                        databaseConnection.conn.Close();
                         return true;
                     }
                     catch (Exception ex)
@@ -152,13 +133,13 @@ namespace Books.me
                 }
                 else
                 {
-                    conn.Close();
+                    databaseConnection.conn.Close();
                     return false;
                 }
             }
             catch (Exception ex)
             {
-                conn.Close();
+                databaseConnection.conn.Close();
                 return false;
             }
         }
@@ -171,60 +152,36 @@ namespace Books.me
             string query = $"SELECT * FROM uinfo WHERE username='{user}' AND password= '{encryptedPassword}';";
             try
             {
-                if (OpenConnection())
+                if (databaseConnection.OpenConnection())
                 {
-                    conn.Ping();
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    databaseConnection.conn.Ping();
+                    MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
                     {
                         reader.Close();
-                        conn.Close();
+                        databaseConnection.conn.Close();
                         return true;
 
                     }
                     else
                     {
                         reader.Close();
-                        conn.Close();
+                        databaseConnection.conn.Close();
                         return false;
                     }
                 }
                 else
                 {
-                    conn.Close();
+                    databaseConnection.conn.Close();
                     return false;
                 }
-                return true;
             }
             catch (Exception ex)
             {
 
-                conn.Close();
-                return false;
-            }
-        }
-
-        private bool OpenConnection()
-        {
-            try
-            {
-                conn.Open();
-
-                return true;
-            }
-            catch (MySqlException ex)
-            {
-                switch (ex.Number)
-                {
-                    case 0:
-                        MessageBox.Show("Connection to server failed");
-                        break;
-                    case 1045:
-                        MessageBox.Show("Incorrect credentials!");
-                        break;
-                }
+                databaseConnection.conn.Close();
                 return false;
             }
         }
