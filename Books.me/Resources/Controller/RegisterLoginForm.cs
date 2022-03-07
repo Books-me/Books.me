@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.IO;
 using Books.me.Resources.Models;
+using Books.me.Resources.Controller;
 
 namespace Books.me
 {
@@ -59,7 +60,6 @@ namespace Books.me
                 waringLabel.ForeColor = Color.Red;
                 waringLabel.Text = "Please enter credentials!";
             }
-
         }
 
         private void registerButton_Click_1(object sender, EventArgs e)
@@ -76,7 +76,6 @@ namespace Books.me
             {
                 waringLabel.Text = $"This username is taken!";
             }
-
         }
 
         //encryption
