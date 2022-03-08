@@ -99,29 +99,32 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Views\logo.png" />
+    <Folder Include="Content\HomePageForm\" />
+    <Folder Include="Resources\Views\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Views\account.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Views\user %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Views\key.png" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <None Include="Resources\Views\pngtree-vector-plan11ning-icon-png-image_327954.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Views\close.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hidden41.png" />
-    <Content Include="Resources\view.png" />
-    <None Include="Resources\view1.png" />
-    <Content Include="Resources\Views\view.png" />
+    <None Include="Content\BookCovers\TheSubtleArtOfNotGivingAFuck_bk1.jpg" />
+    <None Include="Content\BookCovers\TheNatureOfSpaceAndTime_bk5.jpg" />
+    <None Include="Content\BookCovers\TheLightningTief_bk7.jpg" />
+    <None Include="Content\BookCovers\TheAlchemist_bk2.jpg" />
+    <None Include="Content\BookCovers\TheAdventuresOfArseneLupinGentleman-Thief_bk10.jpg" />
+    <None Include="Content\BookCovers\ShadowAndBone_bk3.jpg" />
+    <None Include="Content\BookCovers\PodIgoto_bk8.jpg" />
+    <None Include="Content\BookCovers\MurderOnTheOrientExpress_bk9.jpg" />
+    <None Include="Content\BookCovers\IT_bk4.jpg" />
+    <None Include="Content\BookCovers\ElonMusk_bk6.jpg" />
+    <Content Include="Content\LibraryForm\Clock.png" />
+    <Content Include="Content\LibraryForm\HalfStar.png" />
+    <Content Include="Content\LibraryForm\LeftArrow.png" />
+    <Content Include="Content\LibraryForm\Pages.png" />
+    <Content Include="Content\LibraryForm\Star.png" />
+    <Content Include="Content\LoginForm\Account.png" />
+    <Content Include="Content\LoginForm\Close.png" />
+    <Content Include="Content\LoginForm\Hidden.png" />
+    <Content Include="Content\LoginForm\Password.png" />
+    <Content Include="Content\LoginForm\User.png" />
+    <Content Include="Content\LoginForm\Visible.png" />
+    <None Include="Resources\CloseWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

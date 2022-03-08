@@ -50,6 +50,12 @@ namespace Books.me
             if (IsLogin(user.Username, user.Password))
             {
                 waringLabel.Text = $"{user.Username} is logged in";
+                this.Hide();
+                HomePageForm homePageForm = new HomePageForm();
+                homePageForm.Closed += (s, args) => this.Close();
+                homePageForm.Show();
+
+                //homePageForm.Dispose();
             }
             else
             {
@@ -60,6 +66,7 @@ namespace Books.me
                 waringLabel.ForeColor = Color.Red;
                 waringLabel.Text = "Please enter credentials!";
             }
+           
         }
 
         private void registerButton_Click_1(object sender, EventArgs e)

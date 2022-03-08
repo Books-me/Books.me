@@ -45,13 +45,13 @@
             this.backToSignIn = new System.Windows.Forms.Label();
             this.hidePassword = new System.Windows.Forms.PictureBox();
             this.showPass = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.passIcon = new System.Windows.Forms.PictureBox();
             this.profileIcon = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hidePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileIcon)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(504, 400);
+            this.loginButton.Location = new System.Drawing.Point(499, 431);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(250, 34);
             this.loginButton.TabIndex = 0;
@@ -77,7 +77,7 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.txtUsername.Location = new System.Drawing.Point(535, 230);
+            this.txtUsername.Location = new System.Drawing.Point(530, 261);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(219, 29);
@@ -93,14 +93,14 @@
             this.panel1.Controls.Add(this.Header);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 578);
+            this.panel1.Size = new System.Drawing.Size(344, 600);
             this.panel1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 279);
+            this.label1.Location = new System.Drawing.Point(44, 293);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 48);
             this.label1.TabIndex = 1;
@@ -112,7 +112,7 @@
             // 
             this.Header.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Header.ForeColor = System.Drawing.Color.White;
-            this.Header.Location = new System.Drawing.Point(42, 230);
+            this.Header.Location = new System.Drawing.Point(40, 244);
             this.Header.Name = "Header";
             this.Header.Size = new System.Drawing.Size(266, 43);
             this.Header.TabIndex = 0;
@@ -123,7 +123,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.panel2.Location = new System.Drawing.Point(504, 261);
+            this.panel2.Location = new System.Drawing.Point(499, 292);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 1);
             this.panel2.TabIndex = 6;
@@ -131,7 +131,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.panel3.Location = new System.Drawing.Point(504, 333);
+            this.panel3.Location = new System.Drawing.Point(499, 364);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 1);
             this.panel3.TabIndex = 8;
@@ -142,7 +142,7 @@
             this.label2.CausesValidation = false;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.label2.Location = new System.Drawing.Point(504, 71);
+            this.label2.Location = new System.Drawing.Point(499, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 104);
             this.label2.TabIndex = 2;
@@ -156,7 +156,7 @@
             this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerButton.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.Location = new System.Drawing.Point(504, 400);
+            this.registerButton.Location = new System.Drawing.Point(499, 431);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(250, 34);
             this.registerButton.TabIndex = 9;
@@ -169,7 +169,7 @@
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.txtPass.Location = new System.Drawing.Point(535, 303);
+            this.txtPass.Location = new System.Drawing.Point(530, 334);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(219, 19);
             this.txtPass.TabIndex = 10;
@@ -179,7 +179,7 @@
             // 
             this.clearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.clearLabel.Location = new System.Drawing.Point(701, 337);
+            this.clearLabel.Location = new System.Drawing.Point(696, 368);
             this.clearLabel.Name = "clearLabel";
             this.clearLabel.Size = new System.Drawing.Size(53, 23);
             this.clearLabel.TabIndex = 11;
@@ -191,7 +191,7 @@
             // 
             this.waringLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.waringLabel.ForeColor = System.Drawing.Color.Red;
-            this.waringLabel.Location = new System.Drawing.Point(532, 175);
+            this.waringLabel.Location = new System.Drawing.Point(527, 206);
             this.waringLabel.Name = "waringLabel";
             this.waringLabel.Size = new System.Drawing.Size(186, 44);
             this.waringLabel.TabIndex = 12;
@@ -201,7 +201,7 @@
             // 
             this.switchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.switchLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.switchLabel.Location = new System.Drawing.Point(504, 437);
+            this.switchLabel.Location = new System.Drawing.Point(499, 468);
             this.switchLabel.Name = "switchLabel";
             this.switchLabel.Size = new System.Drawing.Size(250, 36);
             this.switchLabel.TabIndex = 13;
@@ -213,7 +213,7 @@
             // 
             this.backToSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backToSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.backToSignIn.Location = new System.Drawing.Point(541, 437);
+            this.backToSignIn.Location = new System.Drawing.Point(536, 468);
             this.backToSignIn.Name = "backToSignIn";
             this.backToSignIn.Size = new System.Drawing.Size(163, 36);
             this.backToSignIn.TabIndex = 15;
@@ -224,8 +224,8 @@
             // 
             // hidePassword
             // 
-            this.hidePassword.Image = global::Books.me.Properties.Resources.hidden41;
-            this.hidePassword.Location = new System.Drawing.Point(729, 302);
+            this.hidePassword.ImageLocation = "S:\\Books.me\\Project\\Books.me\\Books.me\\Content\\LoginForm\\Hidden.png";
+            this.hidePassword.Location = new System.Drawing.Point(724, 333);
             this.hidePassword.Name = "hidePassword";
             this.hidePassword.Size = new System.Drawing.Size(25, 25);
             this.hidePassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -235,8 +235,8 @@
             // 
             // showPass
             // 
-            this.showPass.Image = global::Books.me.Properties.Resources.view;
-            this.showPass.Location = new System.Drawing.Point(729, 302);
+            this.showPass.Image = global::Books.me.Properties.Resources.Visible;
+            this.showPass.Location = new System.Drawing.Point(724, 333);
             this.showPass.Name = "showPass";
             this.showPass.Size = new System.Drawing.Size(25, 25);
             this.showPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -244,21 +244,21 @@
             this.showPass.TabStop = false;
             this.showPass.Click += new System.EventHandler(this.showPass_Click);
             // 
-            // pictureBox1
+            // btnClose
             // 
-            this.pictureBox1.Image = global::Books.me.Properties.Resources.close;
-            this.pictureBox1.Location = new System.Drawing.Point(880, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnClose.ImageLocation = "S:\\Books.me\\Project\\Books.me\\Books.me\\Content\\LoginForm\\Close.png";
+            this.btnClose.Location = new System.Drawing.Point(873, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(15, 15);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 14;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // passIcon
             // 
             this.passIcon.Image = ((System.Drawing.Image)(resources.GetObject("passIcon.Image")));
-            this.passIcon.Location = new System.Drawing.Point(504, 302);
+            this.passIcon.Location = new System.Drawing.Point(499, 333);
             this.passIcon.Name = "passIcon";
             this.passIcon.Size = new System.Drawing.Size(25, 25);
             this.passIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -267,11 +267,11 @@
             // 
             // profileIcon
             // 
-            this.profileIcon.Image = global::Books.me.Properties.Resources.account;
-            this.profileIcon.Location = new System.Drawing.Point(504, 230);
+            this.profileIcon.Image = global::Books.me.Properties.Resources.User;
+            this.profileIcon.Location = new System.Drawing.Point(499, 261);
             this.profileIcon.Name = "profileIcon";
             this.profileIcon.Size = new System.Drawing.Size(25, 25);
-            this.profileIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profileIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.profileIcon.TabIndex = 5;
             this.profileIcon.TabStop = false;
             // 
@@ -280,13 +280,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(907, 578);
+            this.ClientSize = new System.Drawing.Size(900, 600);
             this.Controls.Add(this.hidePassword);
             this.Controls.Add(this.showPass);
             this.Controls.Add(this.backToSignIn);
             this.Controls.Add(this.clearLabel);
             this.Controls.Add(this.switchLabel);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.waringLabel);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.registerButton);
@@ -303,12 +303,11 @@
             this.KeyPreview = true;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ss";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hidePassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.passIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profileIcon)).EndInit();
             this.ResumeLayout(false);
@@ -333,7 +332,7 @@
         private System.Windows.Forms.Label clearLabel;
         private System.Windows.Forms.Label waringLabel;
         private System.Windows.Forms.Label switchLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label backToSignIn;
         private System.Windows.Forms.PictureBox hidePassword;
         private System.Windows.Forms.PictureBox showPass;
