@@ -13,6 +13,7 @@ using System.Security.Cryptography;
 using System.IO;
 using Books.me.Resources.Models;
 using Books.me.Resources.Controller;
+using ComponentFactory.Krypton;
 
 namespace Books.me.Resources.Controller
 {

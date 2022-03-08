@@ -31,9 +31,11 @@ namespace Books.me
             int nHeightEllipse // height of ellipse
         );
         private DatabaseConnection databaseConnection;
+        private User user;
         public LoginForm()
         {
             databaseConnection = new DatabaseConnection();
+            user = new User("", "");
             InitializeComponent();
            
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -46,23 +48,15 @@ namespace Books.me
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            User user = new User(txtUsername.Text, txtPass.Text);
+            user.Username = txtUsername.Text;
+            user.Password = txtPass.Text;
             if (IsLogin(user.Username, user.Password))
             {
                 waringLabel.Text = $"{user.Username} is logged in";
 
-                Globals.currentUser = user.Username;
-                databaseConnection.OpenConnection();
-                string query = $"SELECT id FROM uinfo WHERE username='{user.Username}';";
-                MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
-                Globals.currentID = Convert.ToInt32(cmd.ExecuteScalar());
+                GetCurrentUserInfo();
 
-                this.Hide();
-                HomePageForm homePageForm = new HomePageForm();
-                homePageForm.Closed += (s, args) => this.Close();
-                homePageForm.Show();
-
-                //homePageForm.Dispose();
+                HideLoginForm();
             }
             else
             {
@@ -75,10 +69,26 @@ namespace Books.me
             }
            
         }
+        public void GetCurrentUserInfo()
+        {
+            Globals.currentUser = user.Username;
+            databaseConnection.OpenConnection();
+            string query = $"SELECT id FROM uinfo WHERE username='{user.Username}';";
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
+            Globals.currentID = Convert.ToInt32(cmd.ExecuteScalar());
+        }
 
+        public void HideLoginForm()
+        {
+            this.Hide();
+            HomePageForm homePageForm = new HomePageForm();
+            homePageForm.Closed += (s, args) => this.Close();
+            homePageForm.Show();
+        }
         private void registerButton_Click_1(object sender, EventArgs e)
         {
-            User user = new User(txtUsername.Text, txtPass.Text);
+            user.Username = txtUsername.Text;
+            user.Password = txtPass.Text;
             string query = $"SELECT * FROM uinfo WHERE username='{user}';";
 
             if (Register(user.Username, user.Password))
