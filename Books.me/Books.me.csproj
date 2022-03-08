@@ -58,6 +58,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Controller\Globals.cs" />
     <Compile Include="Resources\Controller\HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +104,7 @@
     <Folder Include="Resources\Views\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\LibraryForm\RightArrow.png" />
     <None Include="Content\BookCovers\TheSubtleArtOfNotGivingAFuck_bk1.jpg" />
     <None Include="Content\BookCovers\TheNatureOfSpaceAndTime_bk5.jpg" />
     <None Include="Content\BookCovers\TheLightningTief_bk7.jpg" />

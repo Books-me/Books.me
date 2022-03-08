@@ -37,7 +37,7 @@ namespace Books.me.Resources.Controller
 
         private void HomePageForm_Load(object sender, EventArgs e)
         {
-            
+            lblTitle.Text = $"WELCOME, {Globals.currentUser.ToUpper()}";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +55,11 @@ namespace Books.me.Resources.Controller
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

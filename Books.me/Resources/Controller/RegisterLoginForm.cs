@@ -50,6 +50,13 @@ namespace Books.me
             if (IsLogin(user.Username, user.Password))
             {
                 waringLabel.Text = $"{user.Username} is logged in";
+
+                Globals.currentUser = user.Username;
+                databaseConnection.OpenConnection();
+                string query = $"SELECT id FROM uinfo WHERE username='{user.Username}';";
+                MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
+                Globals.currentID = Convert.ToInt32(cmd.ExecuteScalar());
+
                 this.Hide();
                 HomePageForm homePageForm = new HomePageForm();
                 homePageForm.Closed += (s, args) => this.Close();

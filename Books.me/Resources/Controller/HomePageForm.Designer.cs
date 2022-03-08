@@ -32,22 +32,25 @@
             this.button1 = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.leftSlide = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.backArrow = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backArrow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(606, 557);
+            this.button1.Location = new System.Drawing.Point(203, 597);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -57,14 +60,14 @@
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(465, 70);
+            this.lblTitle.Location = new System.Drawing.Point(215, 70);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(267, 47);
+            this.lblTitle.Size = new System.Drawing.Size(767, 47);
             this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "USER\'S LIBRARY";
+            this.lblTitle.Text = "WELCOME, USER";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -76,6 +79,41 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "_________________________________________________________________________________" +
     "_______________________________________________";
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
+            this.kryptonButton1.Location = new System.Drawing.Point(445, 554);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonButton1.Size = new System.Drawing.Size(313, 66);
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.Rounding = 20;
+            this.kryptonButton1.TabIndex = 10;
+            this.kryptonButton1.Values.Text = "kryptonButton1";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Books.me.Properties.Resources.RightArrow;
+            this.pictureBox4.Location = new System.Drawing.Point(1075, 310);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
+            // leftSlide
+            // 
+            this.leftSlide.Image = global::Books.me.Properties.Resources.LeftArrow;
+            this.leftSlide.Location = new System.Drawing.Point(75, 310);
+            this.leftSlide.Name = "leftSlide";
+            this.leftSlide.Size = new System.Drawing.Size(50, 50);
+            this.leftSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.leftSlide.TabIndex = 8;
+            this.leftSlide.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -107,16 +145,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // backArrow
-            // 
-            this.backArrow.Image = global::Books.me.Properties.Resources.LeftArrow;
-            this.backArrow.Location = new System.Drawing.Point(12, 2);
-            this.backArrow.Name = "backArrow";
-            this.backArrow.Size = new System.Drawing.Size(30, 30);
-            this.backArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.backArrow.TabIndex = 2;
-            this.backArrow.TabStop = false;
-            // 
             // btnClose
             // 
             this.btnClose.Image = global::Books.me.Properties.Resources.CloseWhite;
@@ -136,12 +164,14 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.kryptonButton1);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.leftSlide);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.backArrow);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -150,10 +180,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePageForm";
             this.Load += new System.EventHandler(this.HomePageForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.backArrow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,11 +195,13 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox btnClose;
-        private System.Windows.Forms.PictureBox backArrow;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox leftSlide;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }
