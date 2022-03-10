@@ -39,6 +39,7 @@ namespace Books.me
             InitializeComponent();
            
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            //test
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
