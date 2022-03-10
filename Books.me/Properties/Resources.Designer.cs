@@ -113,6 +113,16 @@ namespace Books.me.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hamlet_bk11 {
+            get {
+                object obj = ResourceManager.GetObject("Hamlet_bk11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HiddenPass {
             get {
                 object obj = ResourceManager.GetObject("HiddenPass", resourceCulture);
@@ -246,6 +256,16 @@ namespace Books.me.Properties {
         internal static System.Drawing.Bitmap TheNatureOfSpaceAndTime_bk5 {
             get {
                 object obj = ResourceManager.GetObject("TheNatureOfSpaceAndTime_bk5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ThePrinceAndThePauper_bk12 {
+            get {
+                object obj = ResourceManager.GetObject("ThePrinceAndThePauper_bk12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

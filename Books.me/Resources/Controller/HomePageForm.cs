@@ -29,11 +29,14 @@ namespace Books.me.Resources.Controller
             int nBottomRect,   // y-coordinate of lower-right corner
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
+            
         );
+        private DatabaseConnection databaseConnection;
         public HomePageForm()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            databaseConnection = new DatabaseConnection();
         }
 
         private void HomePageForm_Load(object sender, EventArgs e)
@@ -61,6 +64,149 @@ namespace Books.me.Resources.Controller
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rightSlide_Click(object sender, EventArgs e)
+        {
+            switch (Globals.pageCount)
+            {
+                case 0:
+                    this.leftBook.Image = Books.me.Properties.Resources.IT_bk4;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheNatureOfSpaceAndTime_bk5;
+                    this.rightBook.Image = Books.me.Properties.Resources.ElonMusk_bk6;
+                    Globals.pageCount++;
+                    break;
+                case 1:
+                    this.leftBook.Image = Books.me.Properties.Resources.TheLightningTief_bk7;
+                    this.middleBook.Image = Books.me.Properties.Resources.PodIgoto_bk8;
+                    this.rightBook.Image = Books.me.Properties.Resources.MurderOnTheOrientExpress_bk9;
+                    Globals.pageCount++;
+                    break;
+               case 2:
+                    this.leftBook.Image = Books.me.Properties.Resources.TheAdventuresOfArseneLupinGentleman_Thief_bk10;
+                    this.middleBook.Image = Books.me.Properties.Resources.Hamlet_bk11;
+                    this.rightBook.Image = Books.me.Properties.Resources.ThePrinceAndThePauper_bk12;
+                    Globals.pageCount++;
+                    break;
+                case 3:
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist_bk2;
+                    this.rightBook.Image = Books.me.Properties.Resources.ShadowAndBone_bk3;
+                    Globals.pageCount = 0;
+                    break;
+            }
+        }
+
+        private void leftSlide_Click(object sender, EventArgs e)
+        {
+            switch (Globals.pageCount)
+            {
+                case 0:
+                    this.leftBook.Image = Books.me.Properties.Resources.TheAdventuresOfArseneLupinGentleman_Thief_bk10;
+                    this.middleBook.Image = Books.me.Properties.Resources.Hamlet_bk11;
+                    this.rightBook.Image = Books.me.Properties.Resources.ThePrinceAndThePauper_bk12;
+                    Globals.pageCount = 3;
+                    break;
+                case 3:
+                    this.leftBook.Image = Books.me.Properties.Resources.TheLightningTief_bk7;
+                    this.middleBook.Image = Books.me.Properties.Resources.PodIgoto_bk8;
+                    this.rightBook.Image = Books.me.Properties.Resources.MurderOnTheOrientExpress_bk9;
+                    Globals.pageCount--;
+                    break;
+                case 2:
+                    this.leftBook.Image = Books.me.Properties.Resources.IT_bk4;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheNatureOfSpaceAndTime_bk5;
+                    this.rightBook.Image = Books.me.Properties.Resources.ElonMusk_bk6;
+                    Globals.pageCount--;
+                    break;
+                case 1:
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist_bk2;
+                    this.rightBook.Image = Books.me.Properties.Resources.ShadowAndBone_bk3;
+                    Globals.pageCount--;
+                    break;
+            }
+        }
+
+        private void leftBook_Click(object sender, EventArgs e)
+        {
+            switch (Globals.pageCount)
+            {
+                case 0:
+                    GetBookInfoFromDb(1);
+                    break;
+                case 1:
+                    GetBookInfoFromDb(4);
+                    break;
+                case 2:
+                    GetBookInfoFromDb(7);
+                    break;
+                case 3:
+                    GetBookInfoFromDb(10);
+                    break;
+            }
+        }
+
+        private void middleBook_Click(object sender, EventArgs e)
+        {
+            switch (Globals.pageCount)
+            {
+                case 0:
+                    GetBookInfoFromDb(2);
+                    break;
+                case 1:
+                    GetBookInfoFromDb(5);
+                    break;
+                case 2:
+                    GetBookInfoFromDb(8);
+                    break;
+                case 3:
+                    GetBookInfoFromDb(11);
+                    break;
+            }
+        }
+
+        private void rightBook_Click(object sender, EventArgs e)
+        {
+            switch (Globals.pageCount)
+            {
+                case 0:
+                    GetBookInfoFromDb(3);
+                    break;
+                case 1:
+                    GetBookInfoFromDb(6);
+                    break;
+                case 2:
+                    GetBookInfoFromDb(9);
+                    break;
+                case 3:
+                    GetBookInfoFromDb(12);
+                    break;
+            }
+        }
+        public void GetBookInfoFromDb(int bookId)
+        {
+            databaseConnection.OpenConnection();
+            string query = $"SELECT * FROM books WHERE books.book_id = {bookId}";
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+            Book book = new Book();
+            if (reader.Read())
+            {
+                book.Title = (string)reader.GetValue(2);
+                book.Author = (string)reader.GetValue(3);
+                book.Description = (string)reader.GetValue(4);
+                book.Genre = (string)reader.GetValue(5);
+                book.Type = (string)reader.GetValue(6);
+                book.Pages = (string)reader.GetValue(7);
+                book.TimeToRead = (string)reader.GetValue(8);
+                book.Rating = (string)reader.GetValue(9);
+                databaseConnection.CloseConnection();
+            }
+            else
+            {
+                databaseConnection.CloseConnection();
+            }
         }
     }
 }

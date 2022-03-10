@@ -10,5 +10,6 @@ namespace Books.me.Resources.Controller
     {
         public static string currentUser;
         public static int currentID;
+        public static int pageCount = 0;
     }
 }

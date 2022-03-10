@@ -70,7 +70,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Controller\Globals.cs" />
+    <Compile Include="Resources\Models\Book.cs" />
+    <Compile Include="Resources\Models\Globals.cs" />
     <Compile Include="Resources\Controller\HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +117,8 @@
     <Folder Include="Resources\Views\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ThePrinceAndThePauper_bk12.jpg" />
+    <None Include="Resources\Hamlet_bk11.jpg" />
     <None Include="Content\LibraryForm\RightArrow.png" />
     <None Include="Content\BookCovers\TheSubtleArtOfNotGivingAFuck_bk1.jpg" />
     <None Include="Content\BookCovers\TheNatureOfSpaceAndTime_bk5.jpg" />

@@ -33,24 +33,24 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.rightSlide = new System.Windows.Forms.PictureBox();
             this.leftSlide = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rightBook = new System.Windows.Forms.PictureBox();
+            this.middleBook = new System.Windows.Forms.PictureBox();
+            this.leftBook = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftSlide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.middleBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Location = new System.Drawing.Point(203, 597);
+            this.button1.Location = new System.Drawing.Point(562, 525);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -90,20 +90,22 @@
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonButton1.StateCommon.Border.Rounding = 20;
             this.kryptonButton1.TabIndex = 10;
             this.kryptonButton1.Values.Text = "kryptonButton1";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // pictureBox4
+            // rightSlide
             // 
-            this.pictureBox4.Image = global::Books.me.Properties.Resources.RightArrow;
-            this.pictureBox4.Location = new System.Drawing.Point(1075, 310);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
+            this.rightSlide.Image = global::Books.me.Properties.Resources.RightArrow;
+            this.rightSlide.Location = new System.Drawing.Point(1075, 310);
+            this.rightSlide.Name = "rightSlide";
+            this.rightSlide.Size = new System.Drawing.Size(50, 50);
+            this.rightSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rightSlide.TabIndex = 9;
+            this.rightSlide.TabStop = false;
+            this.rightSlide.Click += new System.EventHandler(this.rightSlide_Click);
             // 
             // leftSlide
             // 
@@ -114,36 +116,40 @@
             this.leftSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.leftSlide.TabIndex = 8;
             this.leftSlide.TabStop = false;
+            this.leftSlide.Click += new System.EventHandler(this.leftSlide_Click);
             // 
-            // pictureBox3
+            // rightBook
             // 
-            this.pictureBox3.Image = global::Books.me.Properties.Resources.ShadowAndBone_bk3;
-            this.pictureBox3.Location = new System.Drawing.Point(782, 182);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 300);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
+            this.rightBook.Image = global::Books.me.Properties.Resources.ShadowAndBone_bk3;
+            this.rightBook.Location = new System.Drawing.Point(782, 182);
+            this.rightBook.Name = "rightBook";
+            this.rightBook.Size = new System.Drawing.Size(200, 300);
+            this.rightBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.rightBook.TabIndex = 7;
+            this.rightBook.TabStop = false;
+            this.rightBook.Click += new System.EventHandler(this.rightBook_Click);
             // 
-            // pictureBox2
+            // middleBook
             // 
-            this.pictureBox2.Image = global::Books.me.Properties.Resources.TheAlchemist_bk2;
-            this.pictureBox2.Location = new System.Drawing.Point(500, 182);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 300);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.middleBook.Image = global::Books.me.Properties.Resources.TheAlchemist_bk2;
+            this.middleBook.Location = new System.Drawing.Point(500, 182);
+            this.middleBook.Name = "middleBook";
+            this.middleBook.Size = new System.Drawing.Size(200, 300);
+            this.middleBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.middleBook.TabIndex = 6;
+            this.middleBook.TabStop = false;
+            this.middleBook.Click += new System.EventHandler(this.middleBook_Click);
             // 
-            // pictureBox1
+            // leftBook
             // 
-            this.pictureBox1.Image = global::Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
-            this.pictureBox1.Location = new System.Drawing.Point(215, 182);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 300);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.leftBook.Image = global::Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
+            this.leftBook.Location = new System.Drawing.Point(215, 182);
+            this.leftBook.Name = "leftBook";
+            this.leftBook.Size = new System.Drawing.Size(200, 300);
+            this.leftBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.leftBook.TabIndex = 5;
+            this.leftBook.TabStop = false;
+            this.leftBook.Click += new System.EventHandler(this.leftBook_Click);
             // 
             // btnClose
             // 
@@ -165,11 +171,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.kryptonButton1);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.rightSlide);
             this.Controls.Add(this.leftSlide);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.rightBook);
+            this.Controls.Add(this.middleBook);
+            this.Controls.Add(this.leftBook);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnClose);
@@ -180,11 +186,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePageForm";
             this.Load += new System.EventHandler(this.HomePageForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftSlide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rightBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.middleBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.leftBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -197,11 +203,11 @@
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox leftBook;
+        private System.Windows.Forms.PictureBox middleBook;
+        private System.Windows.Forms.PictureBox rightBook;
         private System.Windows.Forms.PictureBox leftSlide;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox rightSlide;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

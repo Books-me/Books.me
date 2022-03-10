@@ -63,5 +63,17 @@ namespace Books.me.Resources.Models
                 return false;
             }
         }
+        public bool CloseConnection()
+        {
+            try
+            {
+                conn.Close();
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                return false;
+            }
+        }
     }
 }
