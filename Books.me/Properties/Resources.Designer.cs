@@ -73,9 +73,9 @@ namespace Books.me.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Close {
+        internal static System.Drawing.Bitmap CloseButton {
             get {
-                object obj = ResourceManager.GetObject("Close", resourceCulture);
+                object obj = ResourceManager.GetObject("CloseButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Books.me.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hidden {
+        internal static System.Drawing.Bitmap HiddenPass {
             get {
-                object obj = ResourceManager.GetObject("Hidden", resourceCulture);
+                object obj = ResourceManager.GetObject("HiddenPass", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -134,7 +134,9 @@
     <Content Include="Content\LibraryForm\Star.png" />
     <Content Include="Content\LoginForm\Account.png" />
     <Content Include="Content\LoginForm\Close.png" />
+    <None Include="Content\LoginForm\CloseButton.png" />
     <Content Include="Content\LoginForm\Hidden.png" />
+    <None Include="Content\LoginForm\HiddenPass.png" />
     <Content Include="Content\LoginForm\Password.png" />
     <Content Include="Content\LoginForm\User.png" />
     <Content Include="Content\LoginForm\Visible.png" />

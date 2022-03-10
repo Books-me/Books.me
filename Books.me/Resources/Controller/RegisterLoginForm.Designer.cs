@@ -224,8 +224,8 @@
             // 
             // hidePassword
             // 
-            this.hidePassword.Image = global::Books.me.Properties.Resources.Hidden;
-            this.hidePassword.ImageLocation = "S:\\Books.me\\Project\\Books.me\\Books.me\\Content\\LoginForm\\Hidden.png";
+            this.hidePassword.Image = global::Books.me.Properties.Resources.HiddenPass;
+            this.hidePassword.ImageLocation = "";
             this.hidePassword.Location = new System.Drawing.Point(724, 333);
             this.hidePassword.Name = "hidePassword";
             this.hidePassword.Size = new System.Drawing.Size(25, 25);
@@ -247,8 +247,8 @@
             // 
             // btnClose
             // 
-            this.btnClose.Image = global::Books.me.Properties.Resources.Close;
-            this.btnClose.ImageLocation = "S:\\Books.me\\Project\\Books.me\\Books.me\\Content\\LoginForm\\Close.png";
+            this.btnClose.Image = global::Books.me.Properties.Resources.CloseButton;
+            this.btnClose.ImageLocation = "";
             this.btnClose.Location = new System.Drawing.Point(873, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(15, 15);
