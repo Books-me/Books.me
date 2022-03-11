@@ -209,15 +209,7 @@ namespace Books.me
                 return false;
             }
         }
-
-        private void Header_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         private void clearLabel_Click(object sender, EventArgs e)
         {
             txtUsername.Clear();
@@ -257,5 +249,6 @@ namespace Books.me
             txtPass.UseSystemPasswordChar = false;
             hidePassword.Visible = false;
         }
+
     }
 }

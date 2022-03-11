@@ -106,7 +106,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Your personal book organizer is waiting for you";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Header
             // 
@@ -118,7 +117,6 @@
             this.Header.TabIndex = 0;
             this.Header.Text = "Glad to see you!";
             this.Header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Header.Click += new System.EventHandler(this.Header_Click);
             // 
             // panel2
             // 
@@ -249,9 +247,9 @@
             // 
             this.btnClose.Image = global::Books.me.Properties.Resources.CloseButton;
             this.btnClose.ImageLocation = "";
-            this.btnClose.Location = new System.Drawing.Point(873, 12);
+            this.btnClose.Location = new System.Drawing.Point(868, 12);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(15, 15);
+            this.btnClose.Size = new System.Drawing.Size(20, 20);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClose.TabIndex = 14;
             this.btnClose.TabStop = false;

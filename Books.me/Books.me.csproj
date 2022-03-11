@@ -70,6 +70,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Controller\SingleBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Controller\SingleBookForm.Designer.cs">
+      <DependentUpon>SingleBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Models\Book.cs" />
     <Compile Include="Resources\Models\Globals.cs" />
     <Compile Include="Resources\Controller\HomePageForm.cs">
@@ -90,6 +96,9 @@
     <Compile Include="Resources\Models\User.cs" />
     <EmbeddedResource Include="Resources\Controller\HomePageForm.resx">
       <DependentUpon>HomePageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controller\SingleBookForm.resx">
+      <DependentUpon>SingleBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Controller\RegisterLoginForm.resx">
       <DependentUpon>RegisterLoginForm.cs</DependentUpon>
@@ -117,6 +126,13 @@
     <Folder Include="Resources\Views\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Pages.png" />
+    <None Include="Resources\Clock.png" />
+    <None Include="Resources\4star.png" />
+    <None Include="Resources\4_5star.png" />
+    <None Include="Resources\5star.png" />
+    <None Include="Resources\4,5star.png" />
+    <None Include="Resources\divider.png" />
     <None Include="Resources\ThePrinceAndThePauper_bk12.jpg" />
     <None Include="Resources\Hamlet_bk11.jpg" />
     <None Include="Content\LibraryForm\RightArrow.png" />

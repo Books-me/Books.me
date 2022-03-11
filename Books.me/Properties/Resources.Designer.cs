@@ -63,6 +63,36 @@ namespace Books.me.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4_5star {
+            get {
+                object obj = ResourceManager.GetObject("_4_5star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4star {
+            get {
+                object obj = ResourceManager.GetObject("_4star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5star {
+            get {
+                object obj = ResourceManager.GetObject("_5star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Clock {
             get {
                 object obj = ResourceManager.GetObject("Clock", resourceCulture);
@@ -86,6 +116,16 @@ namespace Books.me.Properties {
         internal static System.Drawing.Bitmap CloseWhite {
             get {
                 object obj = ResourceManager.GetObject("CloseWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Divider {
+            get {
+                object obj = ResourceManager.GetObject("Divider", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

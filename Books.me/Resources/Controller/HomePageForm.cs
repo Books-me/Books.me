@@ -61,9 +61,12 @@ namespace Books.me.Resources.Controller
             this.Close();
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void btnLibrary_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            SingleBookForm libraryForm = new SingleBookForm();
+            libraryForm.Closed += (s, args) => this.Close();
+            libraryForm.Show();
         }
 
         private void rightSlide_Click(object sender, EventArgs e)
@@ -96,7 +99,6 @@ namespace Books.me.Resources.Controller
                     break;
             }
         }
-
         private void leftSlide_Click(object sender, EventArgs e)
         {
             switch (Globals.pageCount)
@@ -146,7 +148,6 @@ namespace Books.me.Resources.Controller
                     break;
             }
         }
-
         private void middleBook_Click(object sender, EventArgs e)
         {
             switch (Globals.pageCount)
