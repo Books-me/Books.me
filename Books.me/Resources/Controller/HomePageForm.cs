@@ -42,6 +42,29 @@ namespace Books.me.Resources.Controller
         private void HomePageForm_Load(object sender, EventArgs e)
         {
             lblTitle.Text = $"WELCOME, {Globals.currentUser.ToUpper()}";
+            switch (Globals.pageCount)
+            {
+                case 0:
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist_bk2;
+                    this.rightBook.Image = Books.me.Properties.Resources.ShadowAndBone_bk3;
+                    break;
+                case 1:
+                    this.leftBook.Image = Books.me.Properties.Resources.IT_bk4;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheNatureOfSpaceAndTime_bk5;
+                    this.rightBook.Image = Books.me.Properties.Resources.ElonMusk_bk6;
+                    break;
+                case 2:
+                    this.leftBook.Image = Books.me.Properties.Resources.TheLightningTief_bk7;
+                    this.middleBook.Image = Books.me.Properties.Resources.PodIgoto_bk8;
+                    this.rightBook.Image = Books.me.Properties.Resources.MurderOnTheOrientExpress_bk9;
+                    break;
+                case 3:
+                    this.leftBook.Image = Books.me.Properties.Resources.TheAdventuresOfArseneLupinGentleman_Thief_bk10;
+                    this.middleBook.Image = Books.me.Properties.Resources.Hamlet_bk11;
+                    this.rightBook.Image = Books.me.Properties.Resources.ThePrinceAndThePauper_bk12;
+                    break;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -135,36 +158,43 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    GetBookInfoFromDb(1);
+                    GetBookInfoFromDb(1, 1);
                     break;
                 case 1:
-                    GetBookInfoFromDb(4);
+                    GetBookInfoFromDb(1, 4);
                     break;
                 case 2:
-                    GetBookInfoFromDb(7);
+                    GetBookInfoFromDb(1, 7);
                     break;
                 case 3:
-                    GetBookInfoFromDb(10);
+                    GetBookInfoFromDb(1, 10);
                     break;
             }
+            this.Hide();
+            SingleBookForm libraryForm = new SingleBookForm();
+            libraryForm.Show();
         }
         private void middleBook_Click(object sender, EventArgs e)
         {
             switch (Globals.pageCount)
             {
                 case 0:
-                    GetBookInfoFromDb(2);
+                    GetBookInfoFromDb(2, 2);
                     break;
                 case 1:
-                    GetBookInfoFromDb(5);
+                    GetBookInfoFromDb(2, 5);
                     break;
                 case 2:
-                    GetBookInfoFromDb(8);
+                    GetBookInfoFromDb(2 ,8);
                     break;
                 case 3:
-                    GetBookInfoFromDb(11);
+                    GetBookInfoFromDb(2, 11);
                     break;
             }
+            this.Hide();
+            SingleBookForm libraryForm = new SingleBookForm();
+            libraryForm.Closed += (s, args) => this.Close();
+            libraryForm.Show();
         }
 
         private void rightBook_Click(object sender, EventArgs e)
@@ -172,42 +202,56 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    GetBookInfoFromDb(3);
+                    GetBookInfoFromDb(3, 3);
                     break;
                 case 1:
-                    GetBookInfoFromDb(6);
+                    GetBookInfoFromDb(3 ,6);
                     break;
                 case 2:
-                    GetBookInfoFromDb(9);
+                    GetBookInfoFromDb(3, 9);
                     break;
                 case 3:
-                    GetBookInfoFromDb(12);
+                    GetBookInfoFromDb(3, 12);
                     break;
             }
+            this.Hide();
+            SingleBookForm libraryForm = new SingleBookForm();
+            libraryForm.Closed += (s, args) => this.Close();
+            libraryForm.Show();
         }
-        public void GetBookInfoFromDb(int bookId)
+        public void GetBookInfoFromDb(int pictureBoxPosition, int bookId)
         {
             databaseConnection.OpenConnection();
             string query = $"SELECT * FROM books WHERE books.book_id = {bookId}";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
             MySqlDataReader reader = cmd.ExecuteReader();
-            Book book = new Book();
             if (reader.Read())
             {
-                book.Title = (string)reader.GetValue(2);
-                book.Author = (string)reader.GetValue(3);
-                book.Description = (string)reader.GetValue(4);
-                book.Genre = (string)reader.GetValue(5);
-                book.Type = (string)reader.GetValue(6);
-                book.Pages = (string)reader.GetValue(7);
-                book.TimeToRead = (string)reader.GetValue(8);
-                book.Rating = (string)reader.GetValue(9);
+                Book.Title = "";
+                Book.Author = "";
+                Book.Description = "";
+                Book.Genre = "";
+                Book.Type = "";
+                Book.Pages = "";
+                Book.TimeToRead = "";
+                Book.Rating = "";
+                Book.Id = (int)reader.GetValue(0);
+                Book.Title = (string)reader.GetValue(1);
+                Book.Author = (string)reader.GetValue(2);
+                Book.Description = (string)reader.GetValue(3);
+                Book.Genre = (string)reader.GetValue(4);
+                Book.Type = (string)reader.GetValue(5);
+                Book.Pages = (string)reader.GetValue(6);
+                Book.TimeToRead = (string)reader.GetValue(7);
+                Book.Rating = (string)reader.GetValue(8);
                 databaseConnection.CloseConnection();
             }
             else
             {
                 databaseConnection.CloseConnection();
             }
+
         }
     }
+
 }

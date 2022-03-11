@@ -55,7 +55,6 @@ namespace Books.me.Resources.Models
             try
             {
                 conn.Open();
-
                 return true;
             }
             catch (MySqlException ex)

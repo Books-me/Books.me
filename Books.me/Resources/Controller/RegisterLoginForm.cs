@@ -68,7 +68,7 @@ namespace Books.me
                 waringLabel.ForeColor = Color.Red;
                 waringLabel.Text = "Please enter credentials!";
             }
-           
+            Globals.pageCount = 0;
         }
         public void GetCurrentUserInfo()
         {
@@ -101,6 +101,7 @@ namespace Books.me
             {
                 waringLabel.Text = $"This username is taken!";
             }
+            Globals.pageCount = 0;
         }
 
         //encryption

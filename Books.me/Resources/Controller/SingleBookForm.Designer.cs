@@ -32,12 +32,12 @@
             this.lblBookName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblAuthor = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblDescriptionSegment = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblGenre = new System.Windows.Forms.Label();
+            this.lblType = new System.Windows.Forms.Label();
             this.btnAddToLibrary = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblPageCount = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTimeRead = new System.Windows.Forms.Label();
             this.timeToReadIcon = new System.Windows.Forms.PictureBox();
             this.pageCountIcon = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.PictureBox();
@@ -45,6 +45,7 @@
             this.rating = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.singleBookImage = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.timeToReadIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pageCountIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
@@ -92,35 +93,35 @@
             this.lblDescriptionSegment.TabIndex = 6;
             this.lblDescriptionSegment.Values.Text = "Description";
             // 
-            // label1
+            // lblDescription
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(507, 280);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(625, 230);
-            this.label1.TabIndex = 7;
-            this.label1.Text = resources.GetString("label1.Text");
+            this.lblDescription.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
+            this.lblDescription.Location = new System.Drawing.Point(507, 280);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(625, 230);
+            this.lblDescription.TabIndex = 7;
+            this.lblDescription.Text = resources.GetString("lblDescription.Text");
             // 
-            // label2
+            // lblGenre
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(507, 510);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(625, 29);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Genre:";
+            this.lblGenre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGenre.ForeColor = System.Drawing.Color.DimGray;
+            this.lblGenre.Location = new System.Drawing.Point(507, 510);
+            this.lblGenre.Name = "lblGenre";
+            this.lblGenre.Size = new System.Drawing.Size(625, 29);
+            this.lblGenre.TabIndex = 8;
+            this.lblGenre.Text = "Genre:";
             // 
-            // label3
+            // lblType
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(507, 545);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(625, 29);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "This Book is:";
+            this.lblType.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.ForeColor = System.Drawing.Color.DimGray;
+            this.lblType.Location = new System.Drawing.Point(507, 545);
+            this.lblType.Name = "lblType";
+            this.lblType.Size = new System.Drawing.Size(625, 29);
+            this.lblType.TabIndex = 9;
+            this.lblType.Text = "This Book is:";
             // 
             // btnAddToLibrary
             // 
@@ -167,17 +168,21 @@
             // 
             // lblPageCount
             // 
+            this.lblPageCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPageCount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblPageCount.Location = new System.Drawing.Point(867, 165);
             this.lblPageCount.Name = "lblPageCount";
-            this.lblPageCount.Size = new System.Drawing.Size(81, 25);
+            this.lblPageCount.Size = new System.Drawing.Size(93, 25);
             this.lblPageCount.TabIndex = 16;
             // 
-            // label4
+            // lblTimeRead
             // 
-            this.label4.Location = new System.Drawing.Point(1032, 165);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 25);
-            this.label4.TabIndex = 17;
+            this.lblTimeRead.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblTimeRead.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblTimeRead.Location = new System.Drawing.Point(1032, 165);
+            this.lblTimeRead.Name = "lblTimeRead";
+            this.lblTimeRead.Size = new System.Drawing.Size(81, 25);
+            this.lblTimeRead.TabIndex = 17;
             // 
             // timeToReadIcon
             // 
@@ -252,22 +257,31 @@
             this.singleBookImage.TabIndex = 0;
             this.singleBookImage.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(938, 510);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 56);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // SingleBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblTimeRead);
             this.Controls.Add(this.lblPageCount);
             this.Controls.Add(this.timeToReadIcon);
             this.Controls.Add(this.pageCountIcon);
             this.Controls.Add(this.btnAddToLibrary);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblType);
+            this.Controls.Add(this.lblGenre);
+            this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblDescriptionSegment);
             this.Controls.Add(this.rating);
             this.Controls.Add(this.lblAuthor);
@@ -299,15 +313,16 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblAuthor;
         private System.Windows.Forms.PictureBox rating;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblDescriptionSegment;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.Label lblGenre;
+        private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.PictureBox btnClose;
         private System.Windows.Forms.PictureBox backButton;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddToLibrary;
         private System.Windows.Forms.PictureBox pageCountIcon;
         private System.Windows.Forms.PictureBox timeToReadIcon;
         private System.Windows.Forms.Label lblPageCount;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTimeRead;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddToLibrary;
+        private System.Windows.Forms.Button button1;
     }
 }

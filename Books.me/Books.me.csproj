@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Design">
+      <HintPath>C:\Users\G RIGS\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
       <HintPath>C:\Users\G RIGS\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>

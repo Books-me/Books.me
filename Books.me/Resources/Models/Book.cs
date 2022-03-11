@@ -8,50 +8,56 @@ namespace Books.me.Resources.Models
 {
     internal class Book
     {
-        private string title;
-        private string author;
-        private string description;
-        private string genre;
-        private string type;
-        private string pages;
-        private string timeToRead;
-        private string rating;
-        public string Title
+        private static int id;
+        private static string title;
+        private static string author;
+        private static string description;
+        private static string genre;
+        private static string type;
+        private static string pages;
+        private static string timeToRead;
+        private static string rating;
+        public static int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public static string Title
         {
             get { return title; }
             set { title = value; }
         }
-        public string Author
+        public static string Author
         {
             get { return author; }
             set { author = value; }
         }
-        public string Description
+        public static string Description
         {
             get { return description; }
             set { description = value; }
         }
-        public string Genre
+        public static string Genre
         {
             get { return genre; }
             set { genre = value; }
         }
-        public string Type
+        public static string Type
         {
             get { return type; }
             set { type = value; }
         }
-        public string Pages
+        public static string Pages
         {
             get { return pages; }
             set { pages = value; }
         }
-        public string TimeToRead
+        public static string TimeToRead
         {
             get { return timeToRead; }
             set { timeToRead = value; }
         }
-        public string Rating
+        public static string Rating
         {
             get { return rating; }
             set { rating = value; }
