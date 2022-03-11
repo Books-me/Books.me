@@ -39,5 +39,10 @@ namespace Books.me.Resources.Controller
         {
 
         }
+
+        private void btnAddToLibrary_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

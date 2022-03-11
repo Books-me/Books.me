@@ -36,22 +36,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAddToLibrary = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblPageCount = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.timeToReadIcon = new System.Windows.Forms.PictureBox();
             this.pageCountIcon = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.rating = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.singleBookImage = new System.Windows.Forms.PictureBox();
-            this.timeToReadIcon = new System.Windows.Forms.PictureBox();
-            this.lblPageCount = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.timeToReadIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pageCountIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.singleBookImage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeToReadIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBookName
@@ -163,6 +163,31 @@
             this.btnAddToLibrary.StateTracking.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btnAddToLibrary.TabIndex = 13;
             this.btnAddToLibrary.Values.Text = "Add to Library";
+            this.btnAddToLibrary.Click += new System.EventHandler(this.btnAddToLibrary_Click);
+            // 
+            // lblPageCount
+            // 
+            this.lblPageCount.Location = new System.Drawing.Point(867, 165);
+            this.lblPageCount.Name = "lblPageCount";
+            this.lblPageCount.Size = new System.Drawing.Size(81, 25);
+            this.lblPageCount.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(1032, 165);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 25);
+            this.label4.TabIndex = 17;
+            // 
+            // timeToReadIcon
+            // 
+            this.timeToReadIcon.Image = global::Books.me.Properties.Resources.Clock;
+            this.timeToReadIcon.Location = new System.Drawing.Point(996, 165);
+            this.timeToReadIcon.Name = "timeToReadIcon";
+            this.timeToReadIcon.Size = new System.Drawing.Size(25, 25);
+            this.timeToReadIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.timeToReadIcon.TabIndex = 15;
+            this.timeToReadIcon.TabStop = false;
             // 
             // pageCountIcon
             // 
@@ -227,30 +252,6 @@
             this.singleBookImage.TabIndex = 0;
             this.singleBookImage.TabStop = false;
             // 
-            // timeToReadIcon
-            // 
-            this.timeToReadIcon.Image = global::Books.me.Properties.Resources.Clock;
-            this.timeToReadIcon.Location = new System.Drawing.Point(996, 165);
-            this.timeToReadIcon.Name = "timeToReadIcon";
-            this.timeToReadIcon.Size = new System.Drawing.Size(25, 25);
-            this.timeToReadIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.timeToReadIcon.TabIndex = 15;
-            this.timeToReadIcon.TabStop = false;
-            // 
-            // lblPageCount
-            // 
-            this.lblPageCount.Location = new System.Drawing.Point(867, 165);
-            this.lblPageCount.Name = "lblPageCount";
-            this.lblPageCount.Size = new System.Drawing.Size(81, 25);
-            this.lblPageCount.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(1032, 165);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 25);
-            this.label4.TabIndex = 17;
-            // 
             // SingleBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,13 +279,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LibraryForm";
             this.Load += new System.EventHandler(this.SingleBookForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.timeToReadIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pageCountIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rating)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.singleBookImage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeToReadIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
