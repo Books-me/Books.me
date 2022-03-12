@@ -203,7 +203,6 @@
             this.pageCountIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pageCountIcon.TabIndex = 14;
             this.pageCountIcon.TabStop = false;
-            this.pageCountIcon.Click += new System.EventHandler(this.pageCountIcon_Click);
             // 
             // backButton
             // 

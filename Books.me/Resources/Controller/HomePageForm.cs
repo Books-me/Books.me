@@ -86,10 +86,7 @@ namespace Books.me.Resources.Controller
 
         private void btnLibrary_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SingleBookForm libraryForm = new SingleBookForm();
-            libraryForm.Closed += (s, args) => this.Close();
-            libraryForm.Show();
+            CloseHomePage();
         }
 
         private void rightSlide_Click(object sender, EventArgs e)
@@ -158,43 +155,38 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    GetBookInfoFromDb(1, 1);
+                    GetBookInfoFromDb(1);
                     break;
                 case 1:
-                    GetBookInfoFromDb(1, 4);
+                    GetBookInfoFromDb(4);
                     break;
                 case 2:
-                    GetBookInfoFromDb(1, 7);
+                    GetBookInfoFromDb(7);
                     break;
                 case 3:
-                    GetBookInfoFromDb(1, 10);
+                    GetBookInfoFromDb(10);
                     break;
             }
-            this.Hide();
-            SingleBookForm libraryForm = new SingleBookForm();
-            libraryForm.Show();
+            CloseHomePage();
         }
         private void middleBook_Click(object sender, EventArgs e)
         {
             switch (Globals.pageCount)
             {
                 case 0:
-                    GetBookInfoFromDb(2, 2);
+                    GetBookInfoFromDb(2);
                     break;
                 case 1:
-                    GetBookInfoFromDb(2, 5);
+                    GetBookInfoFromDb(5);
                     break;
                 case 2:
-                    GetBookInfoFromDb(2 ,8);
+                    GetBookInfoFromDb(8);
                     break;
                 case 3:
-                    GetBookInfoFromDb(2, 11);
+                    GetBookInfoFromDb(11);
                     break;
             }
-            this.Hide();
-            SingleBookForm libraryForm = new SingleBookForm();
-            libraryForm.Closed += (s, args) => this.Close();
-            libraryForm.Show();
+            CloseHomePage();
         }
 
         private void rightBook_Click(object sender, EventArgs e)
@@ -202,24 +194,21 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    GetBookInfoFromDb(3, 3);
+                    GetBookInfoFromDb(3);
                     break;
                 case 1:
-                    GetBookInfoFromDb(3 ,6);
+                    GetBookInfoFromDb(6);
                     break;
                 case 2:
-                    GetBookInfoFromDb(3, 9);
+                    GetBookInfoFromDb(9);
                     break;
                 case 3:
-                    GetBookInfoFromDb(3, 12);
+                    GetBookInfoFromDb(12);
                     break;
             }
-            this.Hide();
-            SingleBookForm libraryForm = new SingleBookForm();
-            libraryForm.Closed += (s, args) => this.Close();
-            libraryForm.Show();
+            CloseHomePage();
         }
-        public void GetBookInfoFromDb(int pictureBoxPosition, int bookId)
+        public void GetBookInfoFromDb(int bookId)
         {
             databaseConnection.OpenConnection();
             string query = $"SELECT * FROM books WHERE books.book_id = {bookId}";
@@ -227,6 +216,7 @@ namespace Books.me.Resources.Controller
             MySqlDataReader reader = cmd.ExecuteReader();
             if (reader.Read())
             {
+                Book.Id = 0;
                 Book.Title = "";
                 Book.Author = "";
                 Book.Description = "";
@@ -251,6 +241,13 @@ namespace Books.me.Resources.Controller
                 databaseConnection.CloseConnection();
             }
 
+        }
+        public void CloseHomePage()
+        {
+            this.Hide();
+            SingleBookForm libraryForm = new SingleBookForm();
+            libraryForm.Closed += (s, args) => this.Close();
+            libraryForm.Show();
         }
     }
 

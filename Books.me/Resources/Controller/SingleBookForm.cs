@@ -21,6 +21,33 @@ namespace Books.me.Resources.Controller
 
         private void SingleBookForm_Load(object sender, EventArgs e)
         {
+            DisplayCurrentBookData();
+
+            CheckIfBookAdded();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            CloseSingleBookForm();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnAddToLibrary_Click(object sender, EventArgs e)
+        {
+            if (btnAddToLibrary.Text == "Add To Library")
+            {
+                InsertBookIntoDb();
+            }
+            else if (btnAddToLibrary.Text == "Delete From Library")
+            {
+                DeleteBookFromDb();
+            }
+        }
+        public void DisplayCurrentBookData()
+        {
             switch (Book.Title)
             {
                 case "The Subtle Art of Not Giving a F*ck":
@@ -80,6 +107,9 @@ namespace Books.me.Resources.Controller
                     break;
 
             }
+        }
+        public void CheckIfBookAdded()
+        {
             DatabaseConnection databaseConnection = new DatabaseConnection();
             databaseConnection.OpenConnection();
             string query = $"SELECT book_id FROM books JOIN bookToUser on books.book_id = bookToUser.bookIdFk WHERE bookToUser.userIdFk = {Globals.currentID}";
@@ -94,7 +124,7 @@ namespace Books.me.Resources.Controller
 
             if (AddedBooksId.Contains(Book.Id))
             {
-                btnAddToLibrary.Text = "Added";
+                btnAddToLibrary.Text = "Delete From Library";
             }
             else
             {
@@ -102,41 +132,34 @@ namespace Books.me.Resources.Controller
                 btnAddToLibrary.Refresh();
             }
         }
-
-        private void backButton_Click(object sender, EventArgs e)
+        public void CloseSingleBookForm()
         {
             this.Hide();
             HomePageForm homePageForm = new HomePageForm();
             homePageForm.Closed += (s, args) => this.Close();
             homePageForm.Show();
-            
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
+        public void InsertBookIntoDb()
         {
-            this.Close();
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            databaseConnection.OpenConnection();
+
+            string query = $"INSERT INTO bookToUser (id, bookIdFk, userIdFk) VALUES ('', {Book.Id}, {Globals.currentID})";
+
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
+            cmd.ExecuteNonQuery();
+            databaseConnection.CloseConnection();
         }
-
-        private void pageCountIcon_Click(object sender, EventArgs e)
+        public void DeleteBookFromDb()
         {
+            DatabaseConnection databaseConnection = new DatabaseConnection();
+            databaseConnection.OpenConnection();
 
-        }
+            string query = $"DELETE FROM bookToUser WHERE bookToUser.bookIdFk = {Book.Id}";
 
-        private void btnAddToLibrary_Click(object sender, EventArgs e)
-        {
-            if (btnAddToLibrary.Text == "Add To Library")
-            {
-                DatabaseConnection databaseConnection = new DatabaseConnection();
-                databaseConnection.OpenConnection();
-
-                string query = $"INSERT INTO bookToUser (id, bookIdFk, userIdFk) VALUES ('', {Book.Id}, {Globals.currentID})";
-                //string query2 = "SELECT books FROM books JOIN bookToUser on books.book_id = bookToUser.bookIdFk WHERE bookToUser.userIdFk = 1";
-
-                MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
-                cmd.ExecuteNonQuery();
-                databaseConnection.CloseConnection();
-            }
-            
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
+            cmd.ExecuteNonQuery();
+            databaseConnection.CloseConnection();
         }
     }
 }
