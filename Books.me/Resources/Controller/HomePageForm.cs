@@ -67,18 +67,6 @@ namespace Books.me.Resources.Controller
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /*DatabaseConnection dbCon = new DatabaseConnection();
-            dbCon.OpenConnection();
-            
-            string query = "INSERT INTO bookToUser (id, bookIdFk, userIdFk) VALUES ('', 1, 1), ('', 2, 1)";
-            //string query1 = "INSERT INTO books(book_id, title, author, description, genre, type, pages, time, rating, coverPhoto) VALUES ('', 'peshko', 'peshko','peshko','peshko','peshko','peshko','peshko','peshko','peshko'), ('', 'peshko1', 'peshko','peshko','peshko','peshko','peshko','peshko','peshko','peshko');";
-            string query2 = "SELECT books FROM books JOIN bookToUser on books.book_id = bookToUser.bookIdFk WHERE bookToUser.userIdFk = 1";
-            MySqlCommand cmd = new MySqlCommand(query, dbCon.conn);
-            cmd.ExecuteNonQuery();*/
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
