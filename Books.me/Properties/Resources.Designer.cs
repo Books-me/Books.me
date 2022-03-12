@@ -193,6 +193,16 @@ namespace Books.me.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LeftArrowFixed {
+            get {
+                object obj = ResourceManager.GetObject("LeftArrowFixed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MurderOnTheOrientExpress_bk9 {
             get {
                 object obj = ResourceManager.GetObject("MurderOnTheOrientExpress_bk9", resourceCulture);

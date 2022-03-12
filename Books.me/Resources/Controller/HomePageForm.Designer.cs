@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageForm));
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnLibrary = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.buttonLibrary = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.rightSlide = new System.Windows.Forms.PictureBox();
             this.leftSlide = new System.Windows.Forms.PictureBox();
             this.rightBook = new System.Windows.Forms.PictureBox();
@@ -68,47 +68,57 @@
             this.label1.Text = "_________________________________________________________________________________" +
     "_______________________________________________";
             // 
-            // btnLibrary
+            // buttonLibrary
             // 
-            this.btnLibrary.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom3;
-            this.btnLibrary.Location = new System.Drawing.Point(450, 520);
-            this.btnLibrary.Name = "btnLibrary";
-            this.btnLibrary.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.btnLibrary.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.btnLibrary.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.btnLibrary.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.btnLibrary.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btnLibrary.Size = new System.Drawing.Size(300, 60);
-            this.btnLibrary.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.btnLibrary.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.btnLibrary.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.btnLibrary.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.btnLibrary.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.buttonLibrary.Location = new System.Drawing.Point(450, 530);
+            this.buttonLibrary.Name = "buttonLibrary";
+            this.buttonLibrary.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.buttonLibrary.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.buttonLibrary.OverrideDefault.Border.Color1 = System.Drawing.Color.White;
+            this.buttonLibrary.OverrideDefault.Border.Color2 = System.Drawing.Color.White;
+            this.buttonLibrary.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnLibrary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnLibrary.StateCommon.Border.Rounding = 20;
-            this.btnLibrary.StateCommon.Border.Width = 2;
-            this.btnLibrary.StateCommon.Content.LongText.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibrary.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnLibrary.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnLibrary.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibrary.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.btnLibrary.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
-            this.btnLibrary.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnLibrary.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnLibrary.StatePressed.Border.Color1 = System.Drawing.Color.Aqua;
-            this.btnLibrary.StatePressed.Border.Color2 = System.Drawing.Color.Aqua;
-            this.btnLibrary.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.buttonLibrary.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.buttonLibrary.OverrideDefault.Border.Rounding = 20;
+            this.buttonLibrary.OverrideDefault.Border.Width = 2;
+            this.buttonLibrary.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.buttonLibrary.Size = new System.Drawing.Size(300, 60);
+            this.buttonLibrary.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.buttonLibrary.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.buttonLibrary.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.buttonLibrary.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.buttonLibrary.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnLibrary.StatePressed.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnLibrary.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
-            this.btnLibrary.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
-            this.btnLibrary.StateTracking.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btnLibrary.TabIndex = 10;
-            this.btnLibrary.Values.Text = "Library";
-            this.btnLibrary.Click += new System.EventHandler(this.btnLibrary_Click);
+            this.buttonLibrary.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.buttonLibrary.StateCommon.Border.Rounding = 20;
+            this.buttonLibrary.StateCommon.Border.Width = 2;
+            this.buttonLibrary.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.buttonLibrary.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.buttonLibrary.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLibrary.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
+            this.buttonLibrary.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
+            this.buttonLibrary.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.buttonLibrary.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.buttonLibrary.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.buttonLibrary.StatePressed.Border.Rounding = 20;
+            this.buttonLibrary.StatePressed.Border.Width = 2;
+            this.buttonLibrary.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
+            this.buttonLibrary.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
+            this.buttonLibrary.StateTracking.Border.Color1 = System.Drawing.Color.White;
+            this.buttonLibrary.StateTracking.Border.Color2 = System.Drawing.Color.White;
+            this.buttonLibrary.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.buttonLibrary.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.buttonLibrary.StateTracking.Border.Rounding = 20;
+            this.buttonLibrary.StateTracking.Border.Width = 2;
+            this.buttonLibrary.TabIndex = 19;
+            this.buttonLibrary.Values.Text = "Library";
+            this.buttonLibrary.Click += new System.EventHandler(this.buttonLibrary_Click);
             // 
             // rightSlide
             // 
@@ -184,7 +194,7 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
-            this.Controls.Add(this.btnLibrary);
+            this.Controls.Add(this.buttonLibrary);
             this.Controls.Add(this.rightSlide);
             this.Controls.Add(this.leftSlide);
             this.Controls.Add(this.rightBook);
@@ -197,7 +207,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomePageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HomePageForm";
+            this.Text = "Books.me";
             this.Load += new System.EventHandler(this.HomePageForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rightSlide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leftSlide)).EndInit();
@@ -219,6 +229,6 @@
         private System.Windows.Forms.PictureBox rightBook;
         private System.Windows.Forms.PictureBox leftSlide;
         private System.Windows.Forms.PictureBox rightSlide;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnLibrary;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonLibrary;
     }
 }

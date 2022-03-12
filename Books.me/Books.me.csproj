@@ -73,6 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Controller\LibraryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Controller\LibraryForm.Designer.cs">
+      <DependentUpon>LibraryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Controller\SingleBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <Compile Include="Resources\Models\User.cs" />
     <EmbeddedResource Include="Resources\Controller\HomePageForm.resx">
       <DependentUpon>HomePageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controller\LibraryForm.resx">
+      <DependentUpon>LibraryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Controller\SingleBookForm.resx">
       <DependentUpon>SingleBookForm.cs</DependentUpon>
@@ -129,6 +138,7 @@
     <Folder Include="Resources\Views\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\LeftArrowFixed.png" />
     <None Include="Resources\Pages.png" />
     <None Include="Resources\Clock.png" />
     <None Include="Resources\4star.png" />

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,9 +15,22 @@ namespace Books.me.Resources.Controller
 {
     public partial class SingleBookForm : Form
     {
+        //rounded corners
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
+        
         public SingleBookForm()
         {
             InitializeComponent();
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         private void SingleBookForm_Load(object sender, EventArgs e)
@@ -35,15 +49,18 @@ namespace Books.me.Resources.Controller
         {
             this.Close();
         }
-        private void btnAddToLibrary_Click(object sender, EventArgs e)
+        private void buttonAddToLibrary_Click(object sender, EventArgs e)
         {
-            if (btnAddToLibrary.Text == "Add To Library")
+            if (buttonAddToLibrary.Text == "Add To Library")
             {
                 InsertBookIntoDb();
+                buttonAddToLibrary.Enabled=false; 
             }
-            else if (btnAddToLibrary.Text == "Delete From Library")
+            else if (buttonAddToLibrary.Text == "Delete From Library")
             {
+                buttonAddToLibrary.Enabled=true;
                 DeleteBookFromDb();
+                buttonAddToLibrary.Enabled = false; 
             }
         }
         public void DisplayCurrentBookData()
@@ -124,12 +141,12 @@ namespace Books.me.Resources.Controller
 
             if (AddedBooksId.Contains(Book.Id))
             {
-                btnAddToLibrary.Text = "Delete From Library";
+                buttonAddToLibrary.Text = "Delete From Library";
             }
             else
             {
-                btnAddToLibrary.Text = "Add To Library";
-                btnAddToLibrary.Refresh();
+                buttonAddToLibrary.Text = "Add To Library";
+                buttonAddToLibrary.Refresh();
             }
         }
         public void CloseSingleBookForm()
@@ -161,5 +178,7 @@ namespace Books.me.Resources.Controller
             cmd.ExecuteNonQuery();
             databaseConnection.CloseConnection();
         }
+
+        
     }
 }

@@ -72,11 +72,6 @@ namespace Books.me.Resources.Controller
             this.Close();
         }
 
-        private void btnLibrary_Click(object sender, EventArgs e)
-        {
-            CloseHomePage();
-        }
-
         private void rightSlide_Click(object sender, EventArgs e)
         {
             switch (Globals.pageCount)
@@ -236,6 +231,11 @@ namespace Books.me.Resources.Controller
             SingleBookForm libraryForm = new SingleBookForm();
             libraryForm.Closed += (s, args) => this.Close();
             libraryForm.Show();
+        }
+
+        private void buttonLibrary_Click(object sender, EventArgs e)
+        {
+            CloseHomePage();
         }
     }
 
