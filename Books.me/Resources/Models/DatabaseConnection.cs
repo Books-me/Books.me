@@ -60,6 +60,7 @@ namespace Books.me.Resources.Models
             catch (MySqlException ex)
             {
                 return false;
+                throw ex;
             }
         }
         public bool CloseConnection()
@@ -72,6 +73,7 @@ namespace Books.me.Resources.Models
             catch (MySqlException ex)
             {
                 return false;
+                throw ex;
             }
         }
     }

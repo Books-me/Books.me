@@ -8,8 +8,8 @@ namespace Books.me.Resources.Controller
 {
     internal class Globals
     {
-        public static string currentUser;
-        public static int currentID;
-        public static int pageCount = 0;
+        internal static string currentUser;
+        internal static int currentID;
+        internal static int pageCount = 0;
     }
 }
