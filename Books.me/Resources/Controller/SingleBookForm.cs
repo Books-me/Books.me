@@ -68,7 +68,7 @@ namespace Books.me.Resources.Controller
             switch (Book.Title)
             {
                 case "The Subtle Art of Not Giving a F*ck":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAF_ck;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.TheSubtleArtofNot_GivingaF_ck;
                     break;
                 case "The Alchemist":
                     this.singleBookImage.Image = Books.me.Properties.Resources.TheAlchemist;

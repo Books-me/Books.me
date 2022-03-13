@@ -45,7 +45,7 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAF_ck;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtofNot_GivingaF_ck;
                     this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist;
                     this.rightBook.Image = Books.me.Properties.Resources.ShadowandBone;
                     break;
@@ -95,7 +95,7 @@ namespace Books.me.Resources.Controller
                     Globals.pageCount++;
                     break;
                 case 3:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAF_ck;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtofNot_GivingaF_ck;
                     this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist;
                     this.rightBook.Image = Books.me.Properties.Resources.ShadowandBone;
                     Globals.pageCount = 0;
@@ -125,7 +125,7 @@ namespace Books.me.Resources.Controller
                     Globals.pageCount--;
                     break;
                 case 1:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAF_ck;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtofNot_GivingaF_ck;
                     this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist;
                     this.rightBook.Image = Books.me.Properties.Resources.ShadowandBone;
                     Globals.pageCount--;
@@ -193,9 +193,7 @@ namespace Books.me.Resources.Controller
         }
         public void GetBookInfoFromDb(int bookId)
         {
-            databaseConnection.OpenConnection();
             string query = $"SELECT * FROM books WHERE books.book_id = {bookId}";
-            
             try
             {
                 if (databaseConnection.OpenConnection())

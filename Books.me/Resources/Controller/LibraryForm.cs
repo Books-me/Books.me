@@ -64,7 +64,6 @@ namespace Books.me.Resources.Controller
                     addedBook1 = string.Join("", addedBook1.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
                     this.libraryBook1.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook1, Properties.Resources.Culture);
-                    AddedBooksId.Clear();
                     break;
                 case 2:
                     addedBook1 = AddedBooksId[0];
@@ -75,7 +74,6 @@ namespace Books.me.Resources.Controller
 
                     this.libraryBook1.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook1, Properties.Resources.Culture);
                     this.libraryBook2.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook2, Properties.Resources.Culture);
-                    AddedBooksId.Clear();
                     break;
                 case 3:
                     addedBook1 = AddedBooksId[0];
@@ -90,7 +88,6 @@ namespace Books.me.Resources.Controller
                     this.libraryBook1.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook1, Properties.Resources.Culture);
                     this.libraryBook2.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook2, Properties.Resources.Culture);
                     this.libraryBook3.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook3, Properties.Resources.Culture);
-                    AddedBooksId.Clear();
                     break;
                 case 4:
                     addedBook1 = AddedBooksId[0];
@@ -109,7 +106,6 @@ namespace Books.me.Resources.Controller
                     this.libraryBook2.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook2, Properties.Resources.Culture);
                     this.libraryBook3.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook3, Properties.Resources.Culture);
                     this.libraryBook4.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook4, Properties.Resources.Culture);
-                    AddedBooksId.Clear();
                     break;
                 case 5:
                     addedBook1 = AddedBooksId[0];
