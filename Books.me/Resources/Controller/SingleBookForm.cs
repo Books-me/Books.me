@@ -26,7 +26,7 @@ namespace Books.me.Resources.Controller
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
-
+        
         public SingleBookForm()
         {
             InitializeComponent();
@@ -44,6 +44,7 @@ namespace Books.me.Resources.Controller
         {
             CloseSingleBookForm();
         }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -52,13 +53,12 @@ namespace Books.me.Resources.Controller
         {
             if (buttonAddToLibrary.Text == "Add To Library")
             {
-                buttonAddToLibrary.Enabled = true;
                 InsertBookIntoDb();
-                buttonAddToLibrary.Enabled = false; 
+                buttonAddToLibrary.Enabled=false; 
             }
             else if (buttonAddToLibrary.Text == "Delete From Library")
             {
-                buttonAddToLibrary.Enabled = true;
+                buttonAddToLibrary.Enabled=true;
                 DeleteBookFromDb();
                 buttonAddToLibrary.Enabled = false; 
             }
@@ -104,7 +104,13 @@ namespace Books.me.Resources.Controller
                     this.singleBookImage.Image = Books.me.Properties.Resources.ThePrinceandthePauper;
                     break;
             }
-
+            lblBookName.Text = Book.Title;
+            lblAuthor.Text = Book.Author;
+            lblDescription.Text = Book.Description;
+            lblGenre.Text = "Genre: " + Book.Genre;
+            lblType.Text = "This book is: " + Book.Type;
+            lblPageCount.Text = Book.Pages + " Pages";
+            lblTimeRead.Text = Book.TimeToRead + " Hours";
             switch (Book.Rating)
             {
                 case "4":
@@ -116,15 +122,8 @@ namespace Books.me.Resources.Controller
                 case "5":
                     this.rating.Image = Books.me.Properties.Resources._5star;
                     break;
-            }
 
-            lblBookName.Text = Book.Title;
-            lblAuthor.Text = Book.Author;
-            lblDescription.Text = Book.Description;
-            lblGenre.Text = "Genre: " + Book.Genre;
-            lblType.Text = "This book is: " + Book.Type;
-            lblPageCount.Text = Book.Pages + " Pages";
-            lblTimeRead.Text = Book.TimeToRead + " Hours";
+            }
         }
         public void CheckIfBookAdded()
         {
@@ -182,49 +181,26 @@ namespace Books.me.Resources.Controller
         public void InsertBookIntoDb()
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
-            try
-            {
-                string query = $"INSERT INTO bookToUser (id, bookIdFk, userIdFk) VALUES ('', {Book.Id}, {Globals.currentID})";
-                if (databaseConnection.OpenConnection())
-                {
-                    MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
-                    cmd.ExecuteNonQuery();
-                    databaseConnection.CloseConnection();
-                }
-                else
-                {
-                    databaseConnection.CloseConnection();
-                }
-            }
-            catch (MySqlException ex)
-            {
-                databaseConnection.CloseConnection();
-                throw ex;
-            }
+            databaseConnection.OpenConnection();
+
+            string query = $"INSERT INTO bookToUser (id, bookIdFk, userIdFk) VALUES ('', {Book.Id}, {Globals.currentID})";
+
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
+            cmd.ExecuteNonQuery();
+            databaseConnection.CloseConnection();
         }
         public void DeleteBookFromDb()
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
-            try
-            {
-                if (databaseConnection.OpenConnection())
-                {
-                    string query = $"DELETE FROM bookToUser WHERE bookToUser.bookIdFk = {Book.Id}";
+            databaseConnection.OpenConnection();
 
-                    MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
-                    cmd.ExecuteNonQuery();
-                    databaseConnection.CloseConnection();
-                }
-                else
-                {
-                    databaseConnection.CloseConnection();
-                }
-            }
-            catch (MySqlException ex)
-            {
-                databaseConnection.CloseConnection();
-                throw ex;
-            }
+            string query = $"DELETE FROM bookToUser WHERE bookToUser.bookIdFk = {Book.Id}";
+
+            MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
+            cmd.ExecuteNonQuery();
+            databaseConnection.CloseConnection();
         }
+
+        
     }
 }

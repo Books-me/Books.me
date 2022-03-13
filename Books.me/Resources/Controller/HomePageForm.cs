@@ -193,6 +193,7 @@ namespace Books.me.Resources.Controller
         }
         public void GetBookInfoFromDb(int bookId)
         {
+            databaseConnection.OpenConnection();
             string query = $"SELECT * FROM books WHERE books.book_id = {bookId}";
             
             try

@@ -18,6 +18,7 @@ namespace Books.me
 {
     public partial class LoginForm : Form
     {
+
         //rounded corners
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -38,6 +39,7 @@ namespace Books.me
             InitializeComponent();
            
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            //test
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -49,7 +51,7 @@ namespace Books.me
         {
             user.Username = txtUsername.Text;
             user.Password = txtPass.Text;
-            if (Login(user.Username, user.Password))
+            if (IsLogin(user.Username, user.Password))
             {
                 waringLabel.Text = $"{user.Username} is logged in";
 
@@ -57,14 +59,14 @@ namespace Books.me
 
                 HideLoginForm();
             }
-            else if (user.Username == "" && user.Password == "")
-            {
-                waringLabel.ForeColor = Color.Red;
-                waringLabel.Text = "Please enter credentials!";
-            }
             else
             {
                 waringLabel.Text = $"{user.Username} non-existent or incorrect credentials!";
+            }
+            if (user.Username == "" && user.Password == "")
+            {
+                waringLabel.ForeColor = Color.Red;
+                waringLabel.Text = "Please enter credentials!";
             }
             Globals.pageCount = 0;
         }
@@ -88,6 +90,7 @@ namespace Books.me
         {
             user.Username = txtUsername.Text;
             user.Password = txtPass.Text;
+            string query = $"SELECT * FROM uinfo WHERE username='{user}';";
 
             if (Register(user.Username, user.Password))
             {
@@ -133,7 +136,7 @@ namespace Books.me
         {
             string key = "b14ca5898a4e4133bbce2ea2315a1916";
 
-            string encryptedPassword = EncryptString(key, pass);
+            var encryptedPassword = EncryptString(key, pass);
 
             string query = $"INSERT INTO uinfo (id,username,password) VALUES ('','{user}', '{encryptedPassword}');";
             try
@@ -151,7 +154,6 @@ namespace Books.me
                     {
 
                         return false;
-                        throw ex;
                     }
                 }
                 else
@@ -163,13 +165,11 @@ namespace Books.me
             catch (Exception ex)
             {
                 databaseConnection.conn.Close();
-                
                 return false;
-                throw ex;
             }
         }
 
-        public bool Login(string user, string pass)
+        public bool IsLogin(string user, string pass)
         {
 
             string key = "b14ca5898a4e4133bbce2ea2315a1916";
@@ -208,7 +208,6 @@ namespace Books.me
 
                 databaseConnection.conn.Close();
                 return false;
-                throw ex;
             }
         }
         
