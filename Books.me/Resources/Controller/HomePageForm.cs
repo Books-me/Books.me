@@ -193,55 +193,35 @@ namespace Books.me.Resources.Controller
         }
         public void GetBookInfoFromDb(int bookId)
         {
+            databaseConnection.OpenConnection();
             string query = $"SELECT * FROM books WHERE books.book_id = {bookId}";
             MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
             MySqlDataReader reader = cmd.ExecuteReader();
-            try
+            if (reader.Read())
             {
-                if (databaseConnection.OpenConnection())
-                {
-                    if (reader.Read())
-                    {
-                        Book.Id = 0;
-                        Book.Title = "";
-                        Book.Author = "";
-                        Book.Description = "";
-                        Book.Genre = "";
-                        Book.Type = "";
-                        Book.Pages = "";
-                        Book.TimeToRead = "";
-                        Book.Rating = "";
-
-                        Book.Id = (int)reader.GetValue(0);
-                        Book.Title = (string)reader.GetValue(1);
-                        Book.Author = (string)reader.GetValue(2);
-                        Book.Description = (string)reader.GetValue(3);
-                        Book.Genre = (string)reader.GetValue(4);
-                        Book.Type = (string)reader.GetValue(5);
-                        Book.Pages = (string)reader.GetValue(6);
-                        Book.TimeToRead = (string)reader.GetValue(7);
-                        Book.Rating = (string)reader.GetValue(8);
-
-                        reader.Close();
-                        databaseConnection.CloseConnection();
-                    }
-                    else
-                    {
-                        reader.Close();
-                        databaseConnection.CloseConnection();
-                    }
-                }
-                else
-                {
-                    reader.Close();
-                    databaseConnection.CloseConnection();
-                }
+                Book.Id = 0;
+                Book.Title = "";
+                Book.Author = "";
+                Book.Description = "";
+                Book.Genre = "";
+                Book.Type = "";
+                Book.Pages = "";
+                Book.TimeToRead = "";
+                Book.Rating = "";
+                Book.Id = (int)reader.GetValue(0);
+                Book.Title = (string)reader.GetValue(1);
+                Book.Author = (string)reader.GetValue(2);
+                Book.Description = (string)reader.GetValue(3);
+                Book.Genre = (string)reader.GetValue(4);
+                Book.Type = (string)reader.GetValue(5);
+                Book.Pages = (string)reader.GetValue(6);
+                Book.TimeToRead = (string)reader.GetValue(7);
+                Book.Rating = (string)reader.GetValue(8);
+                databaseConnection.CloseConnection();
             }
-            catch (MySqlException ex)
+            else
             {
                 databaseConnection.CloseConnection();
-                reader.Close();
-                throw ex;
             }
 
         }
