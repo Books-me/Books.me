@@ -3,7 +3,7 @@
   Convinient, futuristic, minimalist book organizer.
 
 Sample code from our software (Login MySql Connection):
-[![IsLoginCarbon]()](www.example.com)
+[![IsLoginCarbon]()](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/IsLoginCarbon.png)
 
 ## Installation
 
@@ -51,6 +51,6 @@ Work In Progress
 
 ## People
 
-The current lead maintainers are [Ivan](https://github.com/ValWalker0304) [Damian](https://github.com/Azgorn) & [Bogdan](https://github.com/b0nk0)
+The current lead devs are [Ivan](https://github.com/ValWalker0304), [Damian](https://github.com/Azgorn) & [Bogdan](https://github.com/b0nk0)
 
 ## License
