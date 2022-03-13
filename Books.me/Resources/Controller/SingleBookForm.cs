@@ -68,40 +68,40 @@ namespace Books.me.Resources.Controller
             switch (Book.Title)
             {
                 case "The Subtle Art of Not Giving a F*ck":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAF_ck;
                     break;
                 case "The Alchemist":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.TheAlchemist_bk2;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.TheAlchemist;
                     break;
                 case "Shadow and Bone":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.ShadowAndBone_bk3;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.ShadowandBone;
                     break;
                 case "IT":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.IT_bk4;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.IT;
                     break;
                 case "The Nature of Space and Time":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.TheNatureOfSpaceAndTime_bk5;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.TheNatureofSpaceandTime;
                     break;
                 case "Elon Musk":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.ElonMusk_bk6;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.ElonMusk;
                     break;
                 case "The Lightning Thief":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.TheLightningTief_bk7;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.TheLightningThief;
                     break;
                 case "Under the Yoke: Pod Igoto":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.PodIgoto_bk8;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.UndertheYoke_PodIgoto;
                     break;
                 case "Murder on the Orient Express":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.MurderOnTheOrientExpress_bk9;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.MurderontheOrientExpress;
                     break;
                 case "Arsène Lupin, Gentleman-Thief":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.TheAdventuresOfArseneLupinGentleman_Thief_bk10;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.ArséneLupin_Gentleman_Thief;
                     break;
                 case "Hamlet":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.Hamlet_bk11;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.Hamlet;
                     break;
                 case "The Prince and the Pauper":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.ThePrinceAndThePauper_bk12;
+                    this.singleBookImage.Image = Books.me.Properties.Resources.ThePrinceandthePauper;
                     break;
             }
 
@@ -129,14 +129,15 @@ namespace Books.me.Resources.Controller
         public void CheckIfBookAdded()
         {
             DatabaseConnection databaseConnection = new DatabaseConnection();
-            string query = $"SELECT book_id FROM books JOIN bookToUser on books.book_id = bookToUser.bookIdFk WHERE bookToUser.userIdFk = {Globals.currentID}";
-            MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
-            List<int> AddedBooksId = new List<int>();
-            MySqlDataReader reader = cmd.ExecuteReader();
             try
             {
+                
                 if (databaseConnection.OpenConnection())
                 {
+                    string query = $"SELECT book_id FROM books JOIN bookToUser on books.book_id = bookToUser.bookIdFk WHERE bookToUser.userIdFk = {Globals.currentID}";
+                    MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
+                    List<int> AddedBooksId = new List<int>();
+                    MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
                         AddedBooksId.Add(Int32.Parse(reader["book_id"].ToString()));
@@ -161,13 +162,11 @@ namespace Books.me.Resources.Controller
                 }
                 else
                 {
-                    reader.Close();
                     databaseConnection.CloseConnection();
                 }
             }
             catch (MySqlException ex)
             {
-                reader.Close();
                 databaseConnection.CloseConnection();
 
                 throw ex;

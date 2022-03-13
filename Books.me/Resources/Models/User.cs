@@ -10,6 +10,7 @@ namespace Books.me.Resources.Models
     {
         private string username;
         private string password;
+        private static int booksAdded;
         public string Username
         {
             get { return username; }
@@ -24,6 +25,11 @@ namespace Books.me.Resources.Models
         {
             Username = username;
             Password = password;
+        }
+        public static int BooksAdded
+        {
+            get { return booksAdded; }
+            set { booksAdded = value; }
         }
     }
 }

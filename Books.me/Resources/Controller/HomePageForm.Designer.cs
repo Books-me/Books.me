@@ -144,7 +144,7 @@
             // 
             // rightBook
             // 
-            this.rightBook.Image = global::Books.me.Properties.Resources.ShadowAndBone_bk3;
+            this.rightBook.Image = global::Books.me.Properties.Resources.ShadowandBone;
             this.rightBook.Location = new System.Drawing.Point(782, 182);
             this.rightBook.Name = "rightBook";
             this.rightBook.Size = new System.Drawing.Size(200, 300);
@@ -155,7 +155,7 @@
             // 
             // middleBook
             // 
-            this.middleBook.Image = global::Books.me.Properties.Resources.TheAlchemist_bk2;
+            this.middleBook.Image = global::Books.me.Properties.Resources.TheAlchemist;
             this.middleBook.Location = new System.Drawing.Point(500, 182);
             this.middleBook.Name = "middleBook";
             this.middleBook.Size = new System.Drawing.Size(200, 300);
@@ -166,7 +166,7 @@
             // 
             // leftBook
             // 
-            this.leftBook.Image = global::Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
+            this.leftBook.Image = global::Books.me.Properties.Resources.TheSubtleArtOfNotGivingAF_ck;
             this.leftBook.Location = new System.Drawing.Point(215, 182);
             this.leftBook.Name = "leftBook";
             this.leftBook.Size = new System.Drawing.Size(200, 300);

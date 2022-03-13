@@ -266,7 +266,7 @@
             // 
             // singleBookImage
             // 
-            this.singleBookImage.Image = global::Books.me.Properties.Resources.TheAdventuresOfArseneLupinGentleman_Thief_bk10;
+            this.singleBookImage.Image = global::Books.me.Properties.Resources.ArséneLupin_Gentleman_Thief;
             this.singleBookImage.Location = new System.Drawing.Point(75, 75);
             this.singleBookImage.Name = "singleBookImage";
             this.singleBookImage.Size = new System.Drawing.Size(340, 500);

@@ -45,24 +45,24 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
-                    this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist_bk2;
-                    this.rightBook.Image = Books.me.Properties.Resources.ShadowAndBone_bk3;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAF_ck;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist;
+                    this.rightBook.Image = Books.me.Properties.Resources.ShadowandBone;
                     break;
                 case 1:
-                    this.leftBook.Image = Books.me.Properties.Resources.IT_bk4;
-                    this.middleBook.Image = Books.me.Properties.Resources.TheNatureOfSpaceAndTime_bk5;
-                    this.rightBook.Image = Books.me.Properties.Resources.ElonMusk_bk6;
+                    this.leftBook.Image = Books.me.Properties.Resources.IT;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheNatureofSpaceandTime;
+                    this.rightBook.Image = Books.me.Properties.Resources.ElonMusk;
                     break;
                 case 2:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheLightningTief_bk7;
-                    this.middleBook.Image = Books.me.Properties.Resources.PodIgoto_bk8;
-                    this.rightBook.Image = Books.me.Properties.Resources.MurderOnTheOrientExpress_bk9;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheLightningThief;
+                    this.middleBook.Image = Books.me.Properties.Resources.UndertheYoke_PodIgoto;
+                    this.rightBook.Image = Books.me.Properties.Resources.MurderontheOrientExpress;
                     break;
                 case 3:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheAdventuresOfArseneLupinGentleman_Thief_bk10;
-                    this.middleBook.Image = Books.me.Properties.Resources.Hamlet_bk11;
-                    this.rightBook.Image = Books.me.Properties.Resources.ThePrinceAndThePauper_bk12;
+                    this.leftBook.Image = Books.me.Properties.Resources.ArséneLupin_Gentleman_Thief;
+                    this.middleBook.Image = Books.me.Properties.Resources.Hamlet;
+                    this.rightBook.Image = Books.me.Properties.Resources.ThePrinceandthePauper;
                     break;
             }
         }
@@ -77,27 +77,27 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    this.leftBook.Image = Books.me.Properties.Resources.IT_bk4;
-                    this.middleBook.Image = Books.me.Properties.Resources.TheNatureOfSpaceAndTime_bk5;
-                    this.rightBook.Image = Books.me.Properties.Resources.ElonMusk_bk6;
+                    this.leftBook.Image = Books.me.Properties.Resources.IT;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheNatureofSpaceandTime;
+                    this.rightBook.Image = Books.me.Properties.Resources.ElonMusk;
                     Globals.pageCount++;
                     break;
                 case 1:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheLightningTief_bk7;
-                    this.middleBook.Image = Books.me.Properties.Resources.PodIgoto_bk8;
-                    this.rightBook.Image = Books.me.Properties.Resources.MurderOnTheOrientExpress_bk9;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheLightningThief;
+                    this.middleBook.Image = Books.me.Properties.Resources.UndertheYoke_PodIgoto;
+                    this.rightBook.Image = Books.me.Properties.Resources.MurderontheOrientExpress;
                     Globals.pageCount++;
                     break;
                case 2:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheAdventuresOfArseneLupinGentleman_Thief_bk10;
-                    this.middleBook.Image = Books.me.Properties.Resources.Hamlet_bk11;
-                    this.rightBook.Image = Books.me.Properties.Resources.ThePrinceAndThePauper_bk12;
+                    this.leftBook.Image = Books.me.Properties.Resources.ArséneLupin_Gentleman_Thief;
+                    this.middleBook.Image = Books.me.Properties.Resources.Hamlet;
+                    this.rightBook.Image = Books.me.Properties.Resources.ThePrinceandthePauper;
                     Globals.pageCount++;
                     break;
                 case 3:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
-                    this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist_bk2;
-                    this.rightBook.Image = Books.me.Properties.Resources.ShadowAndBone_bk3;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAF_ck;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist;
+                    this.rightBook.Image = Books.me.Properties.Resources.ShadowandBone;
                     Globals.pageCount = 0;
                     break;
             }
@@ -107,27 +107,27 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheAdventuresOfArseneLupinGentleman_Thief_bk10;
-                    this.middleBook.Image = Books.me.Properties.Resources.Hamlet_bk11;
-                    this.rightBook.Image = Books.me.Properties.Resources.ThePrinceAndThePauper_bk12;
+                    this.leftBook.Image = Books.me.Properties.Resources.ArséneLupin_Gentleman_Thief;
+                    this.middleBook.Image = Books.me.Properties.Resources.Hamlet;
+                    this.rightBook.Image = Books.me.Properties.Resources.ThePrinceandthePauper;
                     Globals.pageCount = 3;
                     break;
                 case 3:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheLightningTief_bk7;
-                    this.middleBook.Image = Books.me.Properties.Resources.PodIgoto_bk8;
-                    this.rightBook.Image = Books.me.Properties.Resources.MurderOnTheOrientExpress_bk9;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheLightningThief;
+                    this.middleBook.Image = Books.me.Properties.Resources.UndertheYoke_PodIgoto;
+                    this.rightBook.Image = Books.me.Properties.Resources.MurderontheOrientExpress;
                     Globals.pageCount--;
                     break;
                 case 2:
-                    this.leftBook.Image = Books.me.Properties.Resources.IT_bk4;
-                    this.middleBook.Image = Books.me.Properties.Resources.TheNatureOfSpaceAndTime_bk5;
-                    this.rightBook.Image = Books.me.Properties.Resources.ElonMusk_bk6;
+                    this.leftBook.Image = Books.me.Properties.Resources.IT;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheNatureofSpaceandTime;
+                    this.rightBook.Image = Books.me.Properties.Resources.ElonMusk;
                     Globals.pageCount--;
                     break;
                 case 1:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAFuck_bk1;
-                    this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist_bk2;
-                    this.rightBook.Image = Books.me.Properties.Resources.ShadowAndBone_bk3;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtOfNotGivingAF_ck;
+                    this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist;
+                    this.rightBook.Image = Books.me.Properties.Resources.ShadowandBone;
                     Globals.pageCount--;
                     break;
             }
@@ -194,12 +194,13 @@ namespace Books.me.Resources.Controller
         public void GetBookInfoFromDb(int bookId)
         {
             string query = $"SELECT * FROM books WHERE books.book_id = {bookId}";
-            MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
-            MySqlDataReader reader = cmd.ExecuteReader();
+            
             try
             {
                 if (databaseConnection.OpenConnection())
                 {
+                    MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
                         Book.Id = 0;
@@ -233,14 +234,12 @@ namespace Books.me.Resources.Controller
                 }
                 else
                 {
-                    reader.Close();
                     databaseConnection.CloseConnection();
                 }
             }
             catch (MySqlException ex)
             {
                 databaseConnection.CloseConnection();
-                reader.Close();
                 throw ex;
             }
 
@@ -248,15 +247,17 @@ namespace Books.me.Resources.Controller
         public void CloseHomePage()
         {
             this.Hide();
-            SingleBookForm libraryForm = new SingleBookForm();
-            libraryForm.Closed += (s, args) => this.Close();
-            libraryForm.Show();
+            SingleBookForm singleBookForm = new SingleBookForm();
+            singleBookForm.Closed += (s, args) => this.Close();
+            singleBookForm.Show();
         }
 
         private void buttonLibrary_Click(object sender, EventArgs e)
         {
-            CloseHomePage();
+            this.Hide();
+            LibraryForm libraryForm = new LibraryForm();
+            libraryForm.Closed += (s, args) => this.Close();
+            libraryForm.Show();
         }
     }
-
 }
