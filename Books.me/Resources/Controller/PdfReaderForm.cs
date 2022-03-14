@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,14 @@ namespace Books.me.Resources.Controller
 
         private void PdfReaderForm_Load(object sender, EventArgs e)
         {
-            string FileName = @".\Books.me\Resources\ArseneLupinTest.pdf";
+            string FileName = @"..\\Books.me\Content\BooksPDF\ArseneLupinTest.pdf";
             axAcroPDF1.LoadFile(FileName);
-            axAcroPDF1.src = FileName;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo(@"C:\Users\G RIGS\Downloads\ArseneLupinTest.pdf");
+            Process.Start(startInfo);
         }
     }
 }
