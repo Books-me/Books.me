@@ -61,7 +61,7 @@ Sample code from our software:
 
 [![btnLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/btnLoginCarbon.png)](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/btnLoginCarbon.png)
 > Login Button
-
+----
 [![btnLoginCarbon](https://github.com/Books-me/Books.me/blob/master/Images/currentBookData.png)](https://github.com/Books-me/Books.me/blob/master/Images/currentBookData.png)
 > Current Book Data
 
