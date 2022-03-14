@@ -3,7 +3,7 @@
   Convinient, futuristic, minimalist book organizer.
 
 Sample code from our software (LoginButton):
-[![IsLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/IsLoginCarbon.png)]()
+[![IsLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/btnLoginCarbon.png)]()
 
 ## Installation
 
