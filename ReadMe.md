@@ -2,7 +2,7 @@
 
   Convinient, futuristic, minimalist book organizer.
 
-Sample code from our software (Login MySql Connection):
+Sample code from our software (LoginButton):
 [![IsLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/IsLoginCarbon.png)]()
 
 ## Installation
