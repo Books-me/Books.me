@@ -1,6 +1,25 @@
 [![Books.Me Logo](https://raw.githubusercontent.com/Books-me/Books.me/bb926bac2b7ff48923621a69c1f006c4b9206aa1/Images/linkedin_banner_image_1.png)]()
 
-  Convinient, futuristic, minimalist book organizer.
+ ###Convinient, futuristic, minimalist book organizer.
+  
+  ##Project Progress
+- [x] Login/Register Form
+  - [x] no UI
+  - [x] Completed UI
+- [x] Importing MVC pattern
+- [x] Home Page
+  - [x] no UI
+  - [x] Completed UI
+- [x] Junction table
+- [ ] Library
+  - [x] Different content (no UI)
+  - [x] Scroll system (no UI)
+  - [ ] Book reader (PDF / no UI)
+  - [ ] Completed UI
+ - [ ] UNIT testing
+- [ ] Installation
+- [ ] Documentation
+- [ ] Presentation
 
 Sample code from our software (LoginButton):
 [![IsLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/btnLoginCarbon.png)]()
