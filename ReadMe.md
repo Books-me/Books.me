@@ -61,7 +61,7 @@ Sample code from our software:
 `Login Button`
 [![btnLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/btnLoginCarbon.png)](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/btnLoginCarbon.png)
 `Current Book Data`
-[![btnLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/currentBookData.png)](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/currentBookData.png)
+[![btnLoginCarbon](https://github.com/Books-me/Books.me/blob/master/Images/currentBookData.png)](https://github.com/Books-me/Books.me/blob/master/Images/currentBookData.png)
 
 
 ## People
