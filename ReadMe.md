@@ -21,8 +21,6 @@
 - [ ] Documentation
 - [ ] Presentation
 
-Sample code from our software (LoginButton):
-[![IsLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/btnLoginCarbon.png)]()
 
 ## Installation
 
@@ -59,17 +57,17 @@ Work In Progress
 
   To view the examples, clone the Express repo and install the dependencies:
 
-```csharp
-
-```
-
-```csharp
-
-```
+Sample code from our software:
+`Login Button`
+[![btnLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/btnLoginCarbon.png)](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/btnLoginCarbon.png)
+`Current Book Data`
+[![btnLoginCarbon](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/currentBookData.png)](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/currentBookData.png)
 
 
 ## People
 
 The current lead devs are [Ivan](https://github.com/ValWalker0304), [Damian](https://github.com/Azgorn) & [Bogdan](https://github.com/b0nk0)
 
+We received positive reviews from lots of people : [Zakletiq Trezvenik](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/Za%20tova%20books%20me.png)
+<sub><sup>Not actually revied yet!</sup></sub>
 ## License
