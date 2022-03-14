@@ -137,5 +137,13 @@ namespace Books.me.Resources.Controller
             GetAddedToLibraryBooks();
             DisplayAddedBooks(AddedBooksId.Count);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PdfReaderForm pdfReaderForm = new PdfReaderForm();
+            pdfReaderForm.Closed += (s, args) => this.Close();
+            pdfReaderForm.Show();
+        }
     }
 }

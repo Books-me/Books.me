@@ -101,6 +101,16 @@ namespace Books.me.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ArseneLupinTest {
+            get {
+                object obj = ResourceManager.GetObject("ArseneLupinTest", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Clock {
