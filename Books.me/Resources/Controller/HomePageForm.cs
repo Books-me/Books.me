@@ -133,6 +133,9 @@ namespace Books.me.Resources.Controller
             }
         }
 
+
+
+
         private void leftBook_Click(object sender, EventArgs e)
         {
             switch (Globals.pageCount)
@@ -171,7 +174,6 @@ namespace Books.me.Resources.Controller
             }
             CloseHomePage();
         }
-
         private void rightBook_Click(object sender, EventArgs e)
         {
             switch (Globals.pageCount)
@@ -191,6 +193,8 @@ namespace Books.me.Resources.Controller
             }
             CloseHomePage();
         }
+
+
         public void GetBookInfoFromDb(int bookId)
         {
             string query = $"SELECT * FROM books WHERE books.book_id = {bookId}";
