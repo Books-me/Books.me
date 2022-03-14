@@ -313,9 +313,9 @@ namespace Books.me.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TheSubtleArtofNot_GivingaF_ck {
+        internal static System.Drawing.Bitmap TheSubtleArtofNotGivingaFuck {
             get {
-                object obj = ResourceManager.GetObject("TheSubtleArtofNot GivingaF*ck", resourceCulture);
+                object obj = ResourceManager.GetObject("TheSubtleArtofNotGivingaFuck", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

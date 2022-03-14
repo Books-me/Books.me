@@ -45,7 +45,7 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtofNot_GivingaF_ck;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtofNotGivingaFuck;
                     this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist;
                     this.rightBook.Image = Books.me.Properties.Resources.ShadowandBone;
                     break;
@@ -95,7 +95,7 @@ namespace Books.me.Resources.Controller
                     Globals.pageCount++;
                     break;
                 case 3:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtofNot_GivingaF_ck;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtofNotGivingaFuck;
                     this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist;
                     this.rightBook.Image = Books.me.Properties.Resources.ShadowandBone;
                     Globals.pageCount = 0;
@@ -125,7 +125,7 @@ namespace Books.me.Resources.Controller
                     Globals.pageCount--;
                     break;
                 case 1:
-                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtofNot_GivingaF_ck;
+                    this.leftBook.Image = Books.me.Properties.Resources.TheSubtleArtofNotGivingaFuck;
                     this.middleBook.Image = Books.me.Properties.Resources.TheAlchemist;
                     this.rightBook.Image = Books.me.Properties.Resources.ShadowandBone;
                     Globals.pageCount--;

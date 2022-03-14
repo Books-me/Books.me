@@ -166,7 +166,7 @@
             // 
             // leftBook
             // 
-            this.leftBook.Image = global::Books.me.Properties.Resources.TheSubtleArtofNot_GivingaF_ck;
+            this.leftBook.Image = global::Books.me.Properties.Resources.TheSubtleArtofNotGivingaFuck;
             this.leftBook.Location = new System.Drawing.Point(215, 182);
             this.leftBook.Name = "leftBook";
             this.leftBook.Size = new System.Drawing.Size(200, 300);

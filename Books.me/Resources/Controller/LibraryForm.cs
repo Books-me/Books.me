@@ -38,6 +38,7 @@ namespace Books.me.Resources.Controller
             {
                 if (databaseConnection.OpenConnection())
                 {
+                    AddedBooksId.Clear();
                     string query = $"SELECT title FROM books JOIN bookToUser on books.book_id = bookToUser.bookIdFk WHERE bookToUser.userIdFk = {Globals.currentID}";
                     MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
                     
@@ -97,7 +98,7 @@ namespace Books.me.Resources.Controller
                     addedBook2 = string.Join("", addedBook2.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
                     addedBook3 = AddedBooksId[2];
-                    addedBook2 = string.Join("", addedBook2.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+                    addedBook3 = string.Join("", addedBook3.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
                     string addedBook4 = AddedBooksId[3];
                     addedBook4 = string.Join("", addedBook4.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
