@@ -19,6 +19,7 @@ namespace Books.me.Resources.Controller
         public PdfReaderForm()
         {
             InitializeComponent();
+            //
         }
 
         private void PdfReaderForm_Load(object sender, EventArgs e)
