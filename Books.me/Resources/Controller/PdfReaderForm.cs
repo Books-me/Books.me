@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Books.me.Resources.Controller;
 
+
+
 namespace Books.me.Resources.Controller
 {
     public partial class PdfReaderForm : Form
@@ -21,14 +23,27 @@ namespace Books.me.Resources.Controller
 
         private void PdfReaderForm_Load(object sender, EventArgs e)
         {
-            string FileName = @"..\\Books.me\Content\BooksPDF\ArseneLupinTest.pdf";
-            axAcroPDF1.LoadFile(FileName);
+            String openPDFFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\HelpDoc.pdf";//PDF DOc name
+            System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.ArseneLupinTest);//the resource automatically creates
+            axAcroPDF1.LoadFile(openPDFFile);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            ProcessStartInfo startInfo = new ProcessStartInfo(@"C:\Users\G RIGS\Downloads\ArseneLupinTest.pdf");
-            Process.Start(startInfo);
+            this.Close();
         }
+
+        private void btnBackToLibrary_Click(object sender, EventArgs e)
+        {
+            ClosePDFViewerForm();
+        }
+        public void ClosePDFViewerForm()
+        {
+            this.Hide();
+            LibraryForm libraryForm = new LibraryForm();
+            libraryForm.Closed += (s, args) => this.Close();
+            libraryForm.Show();
+        }
+
     }
 }
