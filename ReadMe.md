@@ -1,6 +1,6 @@
 [![Books.Me Logo](https://raw.githubusercontent.com/Books-me/Books.me/bb926bac2b7ff48923621a69c1f006c4b9206aa1/Images/linkedin_banner_image_1.png)]()
 
-  ### Convinient, futuristic, minimalist book organizer.
+  ### Convenient, futuristic, minimalistic book organizer.
   
   ## Project Progress
 - [x] Login/Register Form
@@ -14,7 +14,8 @@
 - [ ] Library
   - [x] Different content (no UI)
   - [x] Scroll system (no UI)
-  - [ ] Book reader (PDF / no UI)
+  - [x] Book reader (PDF / no UI)
+  - [ ] Reading time
   - [ ] Completed UI
  - [ ] UNIT testing
 - [ ] Installation
