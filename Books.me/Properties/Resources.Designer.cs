@@ -163,9 +163,9 @@ namespace Books.me.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] EpubFile {
+        internal static byte[] ElonMuskPDF {
             get {
-                object obj = ResourceManager.GetObject("EpubFile", resourceCulture);
+                object obj = ResourceManager.GetObject("ElonMuskPDF", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -191,6 +191,16 @@ namespace Books.me.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] HamletPDF {
+            get {
+                object obj = ResourceManager.GetObject("HamletPDF", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap HiddenPass {
@@ -207,6 +217,16 @@ namespace Books.me.Properties {
             get {
                 object obj = ResourceManager.GetObject("IT", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ItPDF {
+            get {
+                object obj = ResourceManager.GetObject("ItPDF", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -241,6 +261,16 @@ namespace Books.me.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MurderOnTheOrientExpressPDF {
+            get {
+                object obj = ResourceManager.GetObject("MurderOnTheOrientExpressPDF", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Pages {
@@ -257,6 +287,16 @@ namespace Books.me.Properties {
             get {
                 object obj = ResourceManager.GetObject("Password", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] PodIgotoPDF {
+            get {
+                object obj = ResourceManager.GetObject("PodIgotoPDF", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -281,6 +321,16 @@ namespace Books.me.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ShadowAndBonePDF {
+            get {
+                object obj = ResourceManager.GetObject("ShadowAndBonePDF", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Star {
@@ -301,12 +351,32 @@ namespace Books.me.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] TheAlchemistPDF {
+            get {
+                object obj = ResourceManager.GetObject("TheAlchemistPDF", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap TheLightningThief {
             get {
                 object obj = ResourceManager.GetObject("TheLightningThief", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] TheLightningThiefPDF {
+            get {
+                object obj = ResourceManager.GetObject("TheLightningThiefPDF", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -321,6 +391,16 @@ namespace Books.me.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] TheNatureOfSpaceAndTimePDF {
+            get {
+                object obj = ResourceManager.GetObject("TheNatureOfSpaceAndTimePDF", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap ThePrinceandthePauper {
@@ -331,12 +411,32 @@ namespace Books.me.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ThePrinceAndThePauperPDF {
+            get {
+                object obj = ResourceManager.GetObject("ThePrinceAndThePauperPDF", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap TheSubtleArtofNotGivingaFuck {
             get {
                 object obj = ResourceManager.GetObject("TheSubtleArtofNotGivingaFuck", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] TheSubtleArtofNotGivingaFuckPDF {
+            get {
+                object obj = ResourceManager.GetObject("TheSubtleArtofNotGivingaFuckPDF", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

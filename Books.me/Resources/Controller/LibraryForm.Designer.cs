@@ -59,6 +59,7 @@
             // 
             // libraryBook4
             // 
+            this.libraryBook4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.libraryBook4.Location = new System.Drawing.Point(724, 161);
             this.libraryBook4.Name = "libraryBook4";
             this.libraryBook4.Size = new System.Drawing.Size(200, 300);
@@ -68,6 +69,7 @@
             // 
             // libraryBook3
             // 
+            this.libraryBook3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.libraryBook3.Location = new System.Drawing.Point(491, 161);
             this.libraryBook3.Name = "libraryBook3";
             this.libraryBook3.Size = new System.Drawing.Size(200, 300);
@@ -77,6 +79,7 @@
             // 
             // libraryBook5
             // 
+            this.libraryBook5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.libraryBook5.Location = new System.Drawing.Point(954, 161);
             this.libraryBook5.Name = "libraryBook5";
             this.libraryBook5.Size = new System.Drawing.Size(200, 300);
@@ -86,6 +89,7 @@
             // 
             // libraryBook2
             // 
+            this.libraryBook2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.libraryBook2.Location = new System.Drawing.Point(263, 161);
             this.libraryBook2.Name = "libraryBook2";
             this.libraryBook2.Size = new System.Drawing.Size(200, 300);
@@ -95,6 +99,7 @@
             // 
             // libraryBook1
             // 
+            this.libraryBook1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.libraryBook1.Location = new System.Drawing.Point(33, 161);
             this.libraryBook1.Name = "libraryBook1";
             this.libraryBook1.Size = new System.Drawing.Size(200, 300);

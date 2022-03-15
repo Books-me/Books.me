@@ -139,8 +139,8 @@
   <data name="ElonMusk" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\BookCovers\ElonMusk_bk6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EpubFile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The-Extraordinary-Adventures-of-Arsène-Lupin-Gentleman-Burglar.epub;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ElonMuskPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ElonMusk.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="HalfStar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\LibraryForm\HalfStar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,11 +148,17 @@
   <data name="Hamlet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hamlet_bk11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HamletPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hamlet.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="HiddenPass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\LoginForm\HiddenPass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\BookCovers\IT_bk4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ItPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\It.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LeftArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\LibraryForm\LeftArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,11 +169,17 @@
   <data name="MurderontheOrientExpress" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\BookCovers\MurderOnTheOrientExpress_bk9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MurderOnTheOrientExpressPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MurderOnTheOrientExpress.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Pages" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\LibraryForm\Pages.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\LoginForm\Password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PodIgotoPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PodIgoto.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RightArrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\LibraryForm\RightArrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,23 +187,41 @@
   <data name="ShadowandBone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\BookCovers\ShadowAndBone_bk3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ShadowAndBonePDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ShadowAndBone.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Star" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\LibraryForm\Star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TheAlchemist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\BookCovers\TheAlchemist_bk2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TheAlchemistPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TheAlchemist.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="TheLightningThief" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\BookCovers\TheLightningTief_bk7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TheLightningThiefPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TheLightningThief.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="TheNatureofSpaceandTime" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\BookCovers\TheNatureOfSpaceAndTime_bk5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TheNatureOfSpaceAndTimePDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TheNatureOfSpaceAndTime.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="ThePrinceandthePauper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ThePrinceAndThePauper_bk12.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ThePrinceAndThePauperPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ThePrinceAndThePauper.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="TheSubtleArtofNotGivingaFuck" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\BookCovers\TheSubtleArtOfNotGivingAFuck_bk1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TheSubtleArtofNotGivingaFuckPDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TheSubtleArtofNotGivingaFuck.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="UndertheYoke:PodIgoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Content\BookCovers\PodIgoto_bk8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

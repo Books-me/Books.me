@@ -143,6 +143,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\ElonMusk.pdf" />
+    <None Include="Resources\Hamlet.pdf" />
+    <None Include="Resources\It.pdf" />
+    <None Include="Resources\MurderOnTheOrientExpress.pdf" />
+    <None Include="Resources\PodIgoto.pdf" />
+    <None Include="Resources\TheLightningThief.pdf" />
+    <None Include="Resources\TheSubtleArtofNotGivingaFuck.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -161,7 +168,11 @@
     <None Include="Resources\5star.png" />
     <None Include="Resources\4,5star.png" />
     <None Include="Resources\divider.png" />
+    <None Include="Resources\ShadowAndBone.pdf" />
     <None Include="Resources\The-Extraordinary-Adventures-of-Arsène-Lupin-Gentleman-Burglar.epub" />
+    <None Include="Resources\TheAlchemist.pdf" />
+    <None Include="Resources\TheNatureOfSpaceAndTime.pdf" />
+    <None Include="Resources\ThePrinceAndThePauper.pdf" />
     <None Include="Resources\ThePrinceAndThePauper_bk12.jpg" />
     <None Include="Resources\Hamlet_bk11.jpg" />
     <None Include="Content\LibraryForm\RightArrow.png" />
