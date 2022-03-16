@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Books.me.Resources.Controller;
 using MySql.Data.MySqlClient;
 using Books.me.Resources.Models;
+using System.Runtime.InteropServices;
 
 namespace Books.me.Resources.Controller
 {
@@ -17,6 +18,17 @@ namespace Books.me.Resources.Controller
     {
         public static List<string> AddedBooksName = new List<string>();
 
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+
+        );
         public LibraryForm()
         {
             InitializeComponent();
@@ -156,8 +168,17 @@ namespace Books.me.Resources.Controller
         {
             GetAddedToLibraryBooks();
             DisplayAddedBooks(AddedBooksName.Count);
-            timeReading.Text = PdfReaderForm.DurationRead + " Minutes spend reading today";
-           
+            
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+
+            if (PdfReaderForm.DurationRead == 1)
+            {
+                timeReading.Text = PdfReaderForm.DurationRead + " Minute spend reading today";
+            }
+            else
+            {
+                timeReading.Text = PdfReaderForm.DurationRead + " Minutes spend reading today";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
