@@ -17,6 +17,14 @@ namespace Books.me.Resources.Controller
 {
     public partial class PdfReaderForm : Form
     {
+        Stopwatch stopwatch = new Stopwatch();
+        private static int durationRead;
+        public static int DurationRead
+        {
+            get { return durationRead; }
+            set { durationRead = value; }
+        }
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -37,6 +45,8 @@ namespace Books.me.Resources.Controller
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             DisplayBookPDF(Globals.BookClicked);
+
+            stopwatch.Start();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -46,6 +56,8 @@ namespace Books.me.Resources.Controller
 
         private void btnBackToLibrary_Click(object sender, EventArgs e)
         {
+            stopwatch.Stop();
+            DurationRead = (int)stopwatch.ElapsedMilliseconds / 60000;
             ClosePDFViewerForm();
         }
         public void ClosePDFViewerForm()

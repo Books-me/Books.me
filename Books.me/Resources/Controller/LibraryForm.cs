@@ -156,6 +156,7 @@ namespace Books.me.Resources.Controller
         {
             GetAddedToLibraryBooks();
             DisplayAddedBooks(AddedBooksName.Count);
+            timeReading.Text = PdfReaderForm.DurationRead + " Minutes spend reading today";
            
         }
 

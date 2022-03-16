@@ -29,21 +29,33 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibraryForm));
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.btnBackLibrary = new System.Windows.Forms.PictureBox();
             this.libraryBook4 = new System.Windows.Forms.PictureBox();
             this.libraryBook3 = new System.Windows.Forms.PictureBox();
             this.libraryBook5 = new System.Windows.Forms.PictureBox();
             this.libraryBook2 = new System.Windows.Forms.PictureBox();
             this.libraryBook1 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.PictureBox();
+            this.timeReading = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackLibrary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::Books.me.Properties.Resources.CloseWhite;
+            this.btnClose.Location = new System.Drawing.Point(1168, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(20, 20);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 6;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnBackLibrary
             // 
@@ -116,16 +128,16 @@
             this.libraryBook1.TabStop = false;
             this.libraryBook1.Click += new System.EventHandler(this.libraryBook1_Click);
             // 
-            // btnClose
+            // timeReading
             // 
-            this.btnClose.Image = global::Books.me.Properties.Resources.CloseWhite;
-            this.btnClose.Location = new System.Drawing.Point(1168, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(20, 20);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClose.TabIndex = 6;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.timeReading.AutoSize = true;
+            this.timeReading.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timeReading.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.timeReading.Location = new System.Drawing.Point(560, 71);
+            this.timeReading.Name = "timeReading";
+            this.timeReading.Size = new System.Drawing.Size(66, 30);
+            this.timeReading.TabIndex = 7;
+            this.timeReading.Text = "label1";
             // 
             // LibraryForm
             // 
@@ -133,6 +145,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.timeReading);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnBackLibrary);
             this.Controls.Add(this.libraryBook4);
@@ -146,14 +159,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Books.me";
             this.Load += new System.EventHandler(this.LibraryForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackLibrary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -166,5 +180,6 @@
         private System.Windows.Forms.PictureBox libraryBook4;
         private System.Windows.Forms.PictureBox btnBackLibrary;
         private System.Windows.Forms.PictureBox btnClose;
+        private System.Windows.Forms.Label timeReading;
     }
 }

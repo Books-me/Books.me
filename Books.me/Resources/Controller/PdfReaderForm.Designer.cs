@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PdfReaderForm));
             this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
-            this.btnClose = new System.Windows.Forms.PictureBox();
             this.btnBackToLibrary = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackToLibrary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.SuspendLayout();
             // 
             // axAcroPDF1
@@ -46,17 +46,6 @@
             this.axAcroPDF1.Size = new System.Drawing.Size(1200, 600);
             this.axAcroPDF1.TabIndex = 0;
             // 
-            // btnClose
-            // 
-            this.btnClose.Image = global::Books.me.Properties.Resources.CloseWhite;
-            this.btnClose.Location = new System.Drawing.Point(1168, 12);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(20, 20);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClose.TabIndex = 2;
-            this.btnClose.TabStop = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // btnBackToLibrary
             // 
             this.btnBackToLibrary.Image = global::Books.me.Properties.Resources.LeftArrowFixed;
@@ -67,6 +56,17 @@
             this.btnBackToLibrary.TabIndex = 5;
             this.btnBackToLibrary.TabStop = false;
             this.btnBackToLibrary.Click += new System.EventHandler(this.btnBackToLibrary_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::Books.me.Properties.Resources.CloseWhite;
+            this.btnClose.Location = new System.Drawing.Point(1168, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(20, 20);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 2;
+            this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // PdfReaderForm
             // 
@@ -84,8 +84,8 @@
             this.Text = "PdfReaderForm";
             this.Load += new System.EventHandler(this.PdfReaderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackToLibrary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
 
         }
