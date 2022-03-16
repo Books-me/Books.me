@@ -35,7 +35,6 @@
             this.libraryBook5 = new System.Windows.Forms.PictureBox();
             this.libraryBook2 = new System.Windows.Forms.PictureBox();
             this.libraryBook1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackLibrary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook4)).BeginInit();
@@ -60,46 +59,55 @@
             // libraryBook4
             // 
             this.libraryBook4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.libraryBook4.Enabled = false;
             this.libraryBook4.Location = new System.Drawing.Point(724, 161);
             this.libraryBook4.Name = "libraryBook4";
             this.libraryBook4.Size = new System.Drawing.Size(200, 300);
             this.libraryBook4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.libraryBook4.TabIndex = 3;
             this.libraryBook4.TabStop = false;
+            this.libraryBook4.Click += new System.EventHandler(this.libraryBook4_Click);
             // 
             // libraryBook3
             // 
             this.libraryBook3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.libraryBook3.Enabled = false;
             this.libraryBook3.Location = new System.Drawing.Point(491, 161);
             this.libraryBook3.Name = "libraryBook3";
             this.libraryBook3.Size = new System.Drawing.Size(200, 300);
             this.libraryBook3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.libraryBook3.TabIndex = 2;
             this.libraryBook3.TabStop = false;
+            this.libraryBook3.Click += new System.EventHandler(this.libraryBook3_Click);
             // 
             // libraryBook5
             // 
             this.libraryBook5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.libraryBook5.Enabled = false;
             this.libraryBook5.Location = new System.Drawing.Point(954, 161);
             this.libraryBook5.Name = "libraryBook5";
             this.libraryBook5.Size = new System.Drawing.Size(200, 300);
             this.libraryBook5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.libraryBook5.TabIndex = 2;
             this.libraryBook5.TabStop = false;
+            this.libraryBook5.Click += new System.EventHandler(this.libraryBook5_Click);
             // 
             // libraryBook2
             // 
             this.libraryBook2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.libraryBook2.Enabled = false;
             this.libraryBook2.Location = new System.Drawing.Point(263, 161);
             this.libraryBook2.Name = "libraryBook2";
             this.libraryBook2.Size = new System.Drawing.Size(200, 300);
             this.libraryBook2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.libraryBook2.TabIndex = 1;
             this.libraryBook2.TabStop = false;
+            this.libraryBook2.Click += new System.EventHandler(this.libraryBook2_Click);
             // 
             // libraryBook1
             // 
             this.libraryBook1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.libraryBook1.Enabled = false;
             this.libraryBook1.Location = new System.Drawing.Point(33, 161);
             this.libraryBook1.Name = "libraryBook1";
             this.libraryBook1.Size = new System.Drawing.Size(200, 300);
@@ -107,16 +115,6 @@
             this.libraryBook1.TabIndex = 0;
             this.libraryBook1.TabStop = false;
             this.libraryBook1.Click += new System.EventHandler(this.libraryBook1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(469, 544);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnClose
             // 
@@ -136,7 +134,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBackLibrary);
             this.Controls.Add(this.libraryBook4);
             this.Controls.Add(this.libraryBook3);
@@ -168,7 +165,6 @@
         private System.Windows.Forms.PictureBox libraryBook3;
         private System.Windows.Forms.PictureBox libraryBook4;
         private System.Windows.Forms.PictureBox btnBackLibrary;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox btnClose;
     }
 }

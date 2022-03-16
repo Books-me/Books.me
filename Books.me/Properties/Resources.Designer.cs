@@ -93,9 +93,9 @@ namespace Books.me.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ArséneLupin_Gentleman_Thief {
+        internal static System.Drawing.Bitmap ArseneLupin_Gentleman_Thief {
             get {
-                object obj = ResourceManager.GetObject("ArséneLupin,Gentleman-Thief", resourceCulture);
+                object obj = ResourceManager.GetObject("ArseneLupin,Gentleman-Thief", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -17,7 +17,6 @@ namespace Books.me.Resources.Controller
 {
     public partial class PdfReaderForm : Form
     {
-
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -29,20 +28,15 @@ namespace Books.me.Resources.Controller
             int nHeightEllipse // height of ellipse
 
         );
-
-
         public PdfReaderForm()
         {
             InitializeComponent();
-            //
         }
-
         private void PdfReaderForm_Load(object sender, EventArgs e)
         {
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            String openPDFFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\HelpDoc.pdf";//PDF DOc name
-            System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.ItPDF);//the resource automatically creates
-            axAcroPDF1.LoadFile(openPDFFile);
+
+            DisplayBookPDF(Globals.BookClicked);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -62,5 +56,60 @@ namespace Books.me.Resources.Controller
             libraryForm.Show();
         }
 
+        public void DisplayBookPDF(int position)
+        {
+            string openPDFFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\HelpDoc.pdf";
+            switch (LibraryForm.AddedBooksName[position])
+            {
+                case "The Subtle Art of Not Giving a Fuck":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.TheSubtleArtofNotGivingaFuckPDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "The Alchemist":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.TheAlchemistPDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "Shadow and Bone":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.ShadowAndBonePDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "IT":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.ItPDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "The Nature of Space and Time":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.TheNatureOfSpaceAndTimePDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "Elon Musk":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.ElonMuskPDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "The Lightning Thief":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.TheLightningThiefPDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "Under the Yoke: Pod Igoto":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.PodIgotoPDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "Murder on the Orient Express":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.MurderOnTheOrientExpressPDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "Arsene Lupin, Gentleman-Thief":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.ArseneLupinTest);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "Hamlet":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.HamletPDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+                case "The Prince and the Pauper":
+                    System.IO.File.WriteAllBytes(openPDFFile, global::Books.me.Properties.Resources.ThePrinceAndThePauperPDF);//the resource automatically creates
+                    axAcroPDF1.LoadFile(openPDFFile);
+                    break;
+            }
+        }
     }
 }

@@ -94,8 +94,8 @@ namespace Books.me.Resources.Controller
                 case "Murder on the Orient Express":
                     this.singleBookImage.Image = Books.me.Properties.Resources.MurderontheOrientExpress;
                     break;
-                case "Arsène Lupin, Gentleman-Thief":
-                    this.singleBookImage.Image = Books.me.Properties.Resources.ArséneLupin_Gentleman_Thief;
+                case "Arsene Lupin, Gentleman-Thief":
+                    this.singleBookImage.Image = Books.me.Properties.Resources.ArseneLupin_Gentleman_Thief;
                     break;
                 case "Hamlet":
                     this.singleBookImage.Image = Books.me.Properties.Resources.Hamlet;

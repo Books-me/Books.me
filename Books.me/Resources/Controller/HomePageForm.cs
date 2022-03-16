@@ -60,7 +60,7 @@ namespace Books.me.Resources.Controller
                     this.rightBook.Image = Books.me.Properties.Resources.MurderontheOrientExpress;
                     break;
                 case 3:
-                    this.leftBook.Image = Books.me.Properties.Resources.ArséneLupin_Gentleman_Thief;
+                    this.leftBook.Image = Books.me.Properties.Resources.ArseneLupin_Gentleman_Thief;
                     this.middleBook.Image = Books.me.Properties.Resources.Hamlet;
                     this.rightBook.Image = Books.me.Properties.Resources.ThePrinceandthePauper;
                     break;
@@ -89,7 +89,7 @@ namespace Books.me.Resources.Controller
                     Globals.pageCount++;
                     break;
                case 2:
-                    this.leftBook.Image = Books.me.Properties.Resources.ArséneLupin_Gentleman_Thief;
+                    this.leftBook.Image = Books.me.Properties.Resources.ArseneLupin_Gentleman_Thief;
                     this.middleBook.Image = Books.me.Properties.Resources.Hamlet;
                     this.rightBook.Image = Books.me.Properties.Resources.ThePrinceandthePauper;
                     Globals.pageCount++;
@@ -107,7 +107,7 @@ namespace Books.me.Resources.Controller
             switch (Globals.pageCount)
             {
                 case 0:
-                    this.leftBook.Image = Books.me.Properties.Resources.ArséneLupin_Gentleman_Thief;
+                    this.leftBook.Image = Books.me.Properties.Resources.ArseneLupin_Gentleman_Thief;
                     this.middleBook.Image = Books.me.Properties.Resources.Hamlet;
                     this.rightBook.Image = Books.me.Properties.Resources.ThePrinceandthePauper;
                     Globals.pageCount = 3;

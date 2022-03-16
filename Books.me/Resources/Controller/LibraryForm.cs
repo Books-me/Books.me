@@ -15,7 +15,8 @@ namespace Books.me.Resources.Controller
 {
     public partial class LibraryForm : Form
     {
-        private static List<string> AddedBooksId = new List<string>();
+        public static List<string> AddedBooksName = new List<string>();
+
         public LibraryForm()
         {
             InitializeComponent();
@@ -38,14 +39,14 @@ namespace Books.me.Resources.Controller
             {
                 if (databaseConnection.OpenConnection())
                 {
-                    AddedBooksId.Clear();
+                    AddedBooksName.Clear();
                     string query = $"SELECT title FROM books JOIN bookToUser on books.book_id = bookToUser.bookIdFk WHERE bookToUser.userIdFk = {Globals.currentID}";
                     MySqlCommand cmd = new MySqlCommand(query, databaseConnection.conn);
                     
                     MySqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        AddedBooksId.Add(reader["title"].ToString());
+                        AddedBooksName.Add(reader["title"].ToString());
                     }
                 }
             }
@@ -61,67 +62,80 @@ namespace Books.me.Resources.Controller
             switch (booksAmount)
             {
                 case 1:
-                    string addedBook1 = AddedBooksId[0];
+                    string addedBook1 = AddedBooksName[0];
                     addedBook1 = string.Join("", addedBook1.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+                    libraryBook1.Enabled = true;
 
                     this.libraryBook1.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook1, Properties.Resources.Culture);
                     break;
                 case 2:
-                    addedBook1 = AddedBooksId[0];
+                    addedBook1 = AddedBooksName[0];
                     addedBook1 = string.Join("", addedBook1.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    string addedBook2 = AddedBooksId[1];
+                    string addedBook2 = AddedBooksName[1];
                     addedBook2 = string.Join("", addedBook2.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
                     this.libraryBook1.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook1, Properties.Resources.Culture);
                     this.libraryBook2.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook2, Properties.Resources.Culture);
+
+                    libraryBook1.Enabled = true;
+                    libraryBook2.Enabled = true;
                     break;
                 case 3:
-                    addedBook1 = AddedBooksId[0];
+                    addedBook1 = AddedBooksName[0];
                     addedBook1 = string.Join("", addedBook1.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    addedBook2 = AddedBooksId[1];
+                    addedBook2 = AddedBooksName[1];
                     addedBook2 = string.Join("", addedBook2.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    string addedBook3 = AddedBooksId[2];
+                    string addedBook3 = AddedBooksName[2];
                     addedBook3 = string.Join("", addedBook3.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
                     this.libraryBook1.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook1, Properties.Resources.Culture);
                     this.libraryBook2.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook2, Properties.Resources.Culture);
                     this.libraryBook3.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook3, Properties.Resources.Culture);
+
+                    libraryBook1.Enabled = true;
+                    libraryBook2.Enabled = true;
+                    libraryBook3.Enabled = true;
                     break;
                 case 4:
-                    addedBook1 = AddedBooksId[0];
+                    addedBook1 = AddedBooksName[0];
                     addedBook1 = string.Join("", addedBook1.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    addedBook2 = AddedBooksId[1];
+                    addedBook2 = AddedBooksName[1];
                     addedBook2 = string.Join("", addedBook2.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    addedBook3 = AddedBooksId[2];
+                    addedBook3 = AddedBooksName[2];
                     addedBook3 = string.Join("", addedBook3.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    string addedBook4 = AddedBooksId[3];
+                    string addedBook4 = AddedBooksName[3];
                     addedBook4 = string.Join("", addedBook4.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
                     this.libraryBook1.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook1, Properties.Resources.Culture);
                     this.libraryBook2.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook2, Properties.Resources.Culture);
                     this.libraryBook3.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook3, Properties.Resources.Culture);
                     this.libraryBook4.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook4, Properties.Resources.Culture);
+
+                    libraryBook1.Enabled = true;
+                    libraryBook2.Enabled = true;
+                    libraryBook3.Enabled = true;
+                    libraryBook4.Enabled = true;
                     break;
                 case 5:
-                    addedBook1 = AddedBooksId[0];
+                    addedBook1 = AddedBooksName[0];
                     addedBook1 = string.Join("", addedBook1.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    addedBook2 = AddedBooksId[1];
+                    addedBook2 = AddedBooksName[1];
                     addedBook2 = string.Join("", addedBook2.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    addedBook3 = AddedBooksId[2];
+                    addedBook3 = AddedBooksName[2];
                     addedBook3 = string.Join("", addedBook3.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    addedBook4 = AddedBooksId[3];
+                    addedBook4 = AddedBooksName[3];
                     addedBook4 = string.Join("", addedBook4.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
-                    string addedBook5 = AddedBooksId[4];
+                    string addedBook5 = AddedBooksName[4];
                     addedBook5 = string.Join("", addedBook5.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
 
                     this.libraryBook1.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook1, Properties.Resources.Culture);
@@ -129,13 +143,19 @@ namespace Books.me.Resources.Controller
                     this.libraryBook3.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook3, Properties.Resources.Culture);
                     this.libraryBook4.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook4, Properties.Resources.Culture);
                     this.libraryBook5.Image = (Image)Properties.Resources.ResourceManager.GetObject(addedBook5, Properties.Resources.Culture);
+
+                    libraryBook1.Enabled = true;
+                    libraryBook2.Enabled = true;
+                    libraryBook3.Enabled = true;
+                    libraryBook4.Enabled = true;
+                    libraryBook5.Enabled = true;
                     break;
             }
         }
         private void LibraryForm_Load(object sender, EventArgs e)
         {
             GetAddedToLibraryBooks();
-            DisplayAddedBooks(AddedBooksId.Count);
+            DisplayAddedBooks(AddedBooksName.Count);
            
         }
 
@@ -148,8 +168,7 @@ namespace Books.me.Resources.Controller
         {
             this.Close();
         }
-
-        private void libraryBook1_Click(object sender, EventArgs e)
+        private void CloseLibraryFormOpenPDF()
         {
             this.Hide();
             PdfReaderForm pdfReaderForm = new PdfReaderForm();
@@ -157,6 +176,34 @@ namespace Books.me.Resources.Controller
             pdfReaderForm.Show();
         }
 
-       
+        private void libraryBook1_Click(object sender, EventArgs e)
+        {
+            Globals.BookClicked = 0;
+            CloseLibraryFormOpenPDF();
+        }
+
+        private void libraryBook2_Click(object sender, EventArgs e)
+        {
+            Globals.BookClicked = 1;
+            CloseLibraryFormOpenPDF();
+        }
+
+        private void libraryBook3_Click(object sender, EventArgs e)
+        {
+            Globals.BookClicked = 2;
+            CloseLibraryFormOpenPDF();
+        }
+
+        private void libraryBook4_Click(object sender, EventArgs e)
+        {
+            Globals.BookClicked = 3;
+            CloseLibraryFormOpenPDF();
+        }
+
+        private void libraryBook5_Click(object sender, EventArgs e)
+        {
+            Globals.BookClicked = 4;
+            CloseLibraryFormOpenPDF();
+        }
     }
 }
