@@ -1,6 +1,6 @@
 [![Books.Me Logo](https://raw.githubusercontent.com/Books-me/Books.me/bb926bac2b7ff48923621a69c1f006c4b9206aa1/Images/linkedin_banner_image_1.png)]()
 
-  ### Convenient, futuristic, minimalistic book organizer.
+  ### Minimalistic Book Organizer and Reader.
   
   ## Project Progress
 - [x] Login/Register Form
@@ -29,10 +29,10 @@ Work In Progress
 
 ## Features
 
-  * Organizing your favourite books
-  * Reliable login form
-  * Convinient Reader for your library
-  * Choose each book you like from our wide selection
+  * Secure Login / Register with AES Encryption
+  * User-friendly UI
+  * Convenient and straightforward functionality
+  * Optimized for Low-End PCs
   
 
 ## Docs & Community
@@ -72,4 +72,3 @@ The current lead devs are [Ivan](https://github.com/ValWalker0304), [Damian](htt
 
 We received positive reviews from lots of people : [Zakletiq Trezvenik](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/Za%20tova%20books%20me.png)
 <sub><sup>Not actually reviewed yet!</sup></sub>
-## License
