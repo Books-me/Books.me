@@ -37,7 +37,7 @@ Work In Progress
 
 ## Docs & Community
 
-  * [Documentation]()
+  * [Documentation](https://github.com/Books-me/Books.me/blob/master/Dokumentaciq/Dokumentaciq.docx)
   * [Presentation]()
 
 
