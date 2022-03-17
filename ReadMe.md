@@ -11,12 +11,12 @@
   - [x] no UI
   - [x] Completed UI
 - [x] Junction table
-- [ ] Library
+- [x] Library
   - [x] Different content (no UI)
   - [x] Scroll system (no UI)
   - [x] Book reader (PDF / no UI)
-  - [ ] Reading time
-  - [ ] Completed UI
+  - [x] Reading time
+  - [x] Completed UI
  - [ ] UNIT testing
 - [ ] Installation
 - [ ] Documentation
