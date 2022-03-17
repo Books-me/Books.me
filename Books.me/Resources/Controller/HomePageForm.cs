@@ -261,6 +261,7 @@ namespace Books.me.Resources.Controller
             LibraryForm libraryForm = new LibraryForm();
             libraryForm.Closed += (s, args) => this.Close();
             libraryForm.Show();
+            Dispose();
         }
     }
 }

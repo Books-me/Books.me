@@ -33,10 +33,7 @@ namespace Books.me.Resources.Controller
         {
             InitializeComponent();
         }
-        private void btnLibraryBack_Click(object sender, EventArgs e)
-        {
-            CloseLibraryForm();
-        }
+       
         public void CloseLibraryForm()
         {
             this.Hide();
@@ -173,18 +170,15 @@ namespace Books.me.Resources.Controller
 
             if (PdfReaderForm.DurationRead == 1)
             {
-                timeReading.Text = PdfReaderForm.DurationRead + " Minute spend reading today";
+                timeReading.Text = PdfReaderForm.DurationRead + " Minute";
             }
             else
             {
-                timeReading.Text = PdfReaderForm.DurationRead + " Minutes spend reading today";
+                timeReading.Text = PdfReaderForm.DurationRead + " Minutes";
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -196,12 +190,14 @@ namespace Books.me.Resources.Controller
             PdfReaderForm pdfReaderForm = new PdfReaderForm();
             pdfReaderForm.Closed += (s, args) => this.Close();
             pdfReaderForm.Show();
+
         }
 
         private void libraryBook1_Click(object sender, EventArgs e)
         {
             Globals.BookClicked = 0;
             CloseLibraryFormOpenPDF();
+            Dispose();
         }
 
         private void libraryBook2_Click(object sender, EventArgs e)
@@ -220,12 +216,25 @@ namespace Books.me.Resources.Controller
         {
             Globals.BookClicked = 3;
             CloseLibraryFormOpenPDF();
+            Dispose();
         }
 
         private void libraryBook5_Click(object sender, EventArgs e)
         {
             Globals.BookClicked = 4;
             CloseLibraryFormOpenPDF();
+        }
+
+        private void buttonBackToHomePage_Click(object sender, EventArgs e)
+        {
+            CloseLibraryForm();
+        }
+        public void Dispose()
+        {
+            // Dispose of unmanaged resources.
+            Dispose(true);
+            // Suppress finalization.
+            GC.SuppressFinalize(this);
         }
     }
 }

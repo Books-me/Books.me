@@ -13,5 +13,7 @@ namespace Books.me.Resources.Controller
         public static int pageCount = 0;
         public static int timer = 0;
         public static int BookClicked = 0;
+
+
     }
 }

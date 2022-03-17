@@ -49,9 +49,9 @@
             // btnBackToLibrary
             // 
             this.btnBackToLibrary.Image = global::Books.me.Properties.Resources.LeftArrowFixed;
-            this.btnBackToLibrary.Location = new System.Drawing.Point(12, 8);
+            this.btnBackToLibrary.Location = new System.Drawing.Point(12, 7);
             this.btnBackToLibrary.Name = "btnBackToLibrary";
-            this.btnBackToLibrary.Size = new System.Drawing.Size(25, 24);
+            this.btnBackToLibrary.Size = new System.Drawing.Size(20, 20);
             this.btnBackToLibrary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBackToLibrary.TabIndex = 5;
             this.btnBackToLibrary.TabStop = false;
@@ -60,7 +60,7 @@
             // btnClose
             // 
             this.btnClose.Image = global::Books.me.Properties.Resources.CloseWhite;
-            this.btnClose.Location = new System.Drawing.Point(1168, 12);
+            this.btnClose.Location = new System.Drawing.Point(1168, 7);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(20, 20);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

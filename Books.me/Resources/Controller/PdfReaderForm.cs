@@ -59,6 +59,7 @@ namespace Books.me.Resources.Controller
             stopwatch.Stop();
             DurationRead = (int)stopwatch.ElapsedMilliseconds / 60000;
             ClosePDFViewerForm();
+            Dispose();
         }
         public void ClosePDFViewerForm()
         {
