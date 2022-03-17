@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 
 
-namespace Books.me
+namespace Books.me.Resources.Controller
 {
     internal static class Program
     {

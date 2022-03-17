@@ -1,4 +1,4 @@
-﻿namespace Books.me
+﻿namespace Books.me.Resources.Controller
 {
     partial class LoginForm
     {
@@ -318,25 +318,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Header;
-        private System.Windows.Forms.PictureBox profileIcon;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox passIcon;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button registerButton;
-        private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.Label clearLabel;
-        private System.Windows.Forms.Label waringLabel;
-        private System.Windows.Forms.Label switchLabel;
-        private System.Windows.Forms.PictureBox btnClose;
-        private System.Windows.Forms.Label backToSignIn;
-        private System.Windows.Forms.PictureBox hidePassword;
-        private System.Windows.Forms.PictureBox showPass;
+        public System.Windows.Forms.Button loginButton;
+        public System.Windows.Forms.TextBox txtUsername;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label Header;
+        public System.Windows.Forms.PictureBox profileIcon;
+        public System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.PictureBox passIcon;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Button registerButton;
+        public System.Windows.Forms.TextBox txtPass;
+        public System.Windows.Forms.Label clearLabel;
+        public System.Windows.Forms.Label waringLabel;
+        public System.Windows.Forms.Label switchLabel;
+        public System.Windows.Forms.PictureBox btnClose;
+        public System.Windows.Forms.Label backToSignIn;
+        public System.Windows.Forms.PictureBox hidePassword;
+        public System.Windows.Forms.PictureBox showPass;
     }
 }
 

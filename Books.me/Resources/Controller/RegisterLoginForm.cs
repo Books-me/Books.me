@@ -14,7 +14,7 @@ using System.IO;
 using Books.me.Resources.Models;
 using Books.me.Resources.Controller;
 
-namespace Books.me
+namespace Books.me.Resources.Controller
 {
     public partial class LoginForm : Form
     {
@@ -188,7 +188,6 @@ namespace Books.me
                         reader.Close();
                         databaseConnection.conn.Close();
                         return true;
-
                     }
                     else
                     {
@@ -218,7 +217,7 @@ namespace Books.me
             txtUsername.Focus();
             waringLabel.Text = "";
         }
-        private void switchLabel_Click(object sender, EventArgs e)
+        public void switchLabel_Click(object sender, EventArgs e)
         {
             loginButton.Visible = true;
             registerButton.Visible = false;

@@ -221,14 +221,14 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox btnClose;
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox leftBook;
-        private System.Windows.Forms.PictureBox middleBook;
-        private System.Windows.Forms.PictureBox rightBook;
-        private System.Windows.Forms.PictureBox leftSlide;
-        private System.Windows.Forms.PictureBox rightSlide;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonLibrary;
+        public System.Windows.Forms.PictureBox btnClose;
+        public System.Windows.Forms.Label lblTitle;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox leftBook;
+        public System.Windows.Forms.PictureBox middleBook;
+        public System.Windows.Forms.PictureBox rightBook;
+        public System.Windows.Forms.PictureBox leftSlide;
+        public System.Windows.Forms.PictureBox rightSlide;
+        public ComponentFactory.Krypton.Toolkit.KryptonButton buttonLibrary;
     }
 }

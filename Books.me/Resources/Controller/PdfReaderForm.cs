@@ -67,7 +67,6 @@ namespace Books.me.Resources.Controller
             libraryForm.Closed += (s, args) => this.Close();
             libraryForm.Show();
         }
-
         public void DisplayBookPDF(int position)
         {
             string openPDFFile = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\HelpDoc.pdf";
