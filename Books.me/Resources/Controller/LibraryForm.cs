@@ -182,7 +182,7 @@ namespace Books.me.Resources.Controller
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.ExitThread();
         }
         private void CloseLibraryFormOpenPDF()
         {

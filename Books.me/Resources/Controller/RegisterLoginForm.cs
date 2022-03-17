@@ -228,7 +228,7 @@ namespace Books.me.Resources.Controller
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.ExitThread();
         }
         private void backToSignIn_Click(object sender, EventArgs e)
         {

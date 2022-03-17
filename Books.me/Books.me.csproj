@@ -36,23 +36,20 @@
     <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
-    <Reference Include="ComponentFactory.Krypton.Design">
-      <HintPath>C:\Users\G RIGS\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
-    </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>C:\Users\G RIGS\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>C:\Users\G RIGS\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>C:\Users\G RIGS\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>C:\Users\G RIGS\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>C:\Users\G RIGS\Downloads\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>..\..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
