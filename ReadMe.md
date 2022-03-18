@@ -26,7 +26,7 @@
  - [x] UNIT testing
 - [x] Installation
 - [x] Documentation
-- [ ] Presentation
+- [x] Presentation
 
 
 ## Installation
@@ -47,7 +47,7 @@
 ## Docs
 
   * [Documentation](https://github.com/Books-me/Books.me/blob/master/Documentation/Dokumentacion.pdf)
-  * [Presentation]()
+  * [Presentation](https://github.com/Books-me/Books.me/blob/master/Documentation/Books.me%20Presentation.pdf)
 
 
 ## Code Examples
