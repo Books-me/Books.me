@@ -19,7 +19,7 @@
   - [x] Completed UI
  - [x] UNIT testing
 - [x] Installation
-- [ ] Documentation
+- [x] Documentation
 - [ ] Presentation
 
 
@@ -37,22 +37,21 @@ Work In Progress
 
 ## Docs & Community
 
-  * [Documentation](https://github.com/Books-me/Books.me/blob/master/Dokumentaciq/Dokumentaciq.docx)
+  * [Documentation](https://github.com/Books-me/Books.me/blob/master/Documentation/Dokumentacion.pdf)
   * [Presentation]()
 
 
 ## Quick Start
 
   The quickest way to get started with *Your **Books.Me** organizer* is to install our executable file from the link [above]() as shown below:
-
-  Install the executable via the installation Wizard:
-  ------
+##### Install the executable via the installation Wizard:
+---
 [![FirstStepInstallation](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/FirstStepInstallation.png)](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/FirstStepInstallation.png)
 [![SecondStepInstallation](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/SecondStepInstallation.png)](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/SecondStepInstallation.png)
 [![ThirdStepInstallation](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/ThirdStepInstallation.png)](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/ThirdStepInstallation.png)
-------
- After you have finished installing the **Books.Me** organizer you should be met with the following screen.
-------
+
+##### After you have finished installing the **Books.Me** organizer you should be met with the following screen.
+---
 [![FinishedInstallation](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/FinishedInstallation.png)](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/FinishedInstallation.png)
 
 
