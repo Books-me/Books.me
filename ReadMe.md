@@ -46,7 +46,7 @@
 
 ## Docs
 
-  * [Documentation](https://github.com/Books-me/Books.me/blob/master/Documentation/Dokumentacion.pdf)
+  * [Documentation](https://github.com/Books-me/Books.me/blob/master/Documentation/Documentation.pdf)
   * [Presentation](https://github.com/Books-me/Books.me/blob/master/Documentation/Books.me%20Presentation.pdf)
 
 
