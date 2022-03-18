@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Books.me.Resources.Models
 {
-    internal class DatabaseConnection
+    public class DatabaseConnection
     {
         public MySqlConnection conn;
         private string serverName;
@@ -31,7 +31,7 @@ namespace Books.me.Resources.Models
             get { return databaseId; }
             set { databaseId = value; }
         }
-        private string DatabasePassword
+        public string DatabasePassword
         {
             get { return password; }
             set { password = value; }

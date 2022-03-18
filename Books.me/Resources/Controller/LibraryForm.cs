@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Books.me.Resources.Controller;
 using MySql.Data.MySqlClient;
 using Books.me.Resources.Models;
 using System.Runtime.InteropServices;
@@ -177,9 +171,6 @@ namespace Books.me.Resources.Controller
                 timeReading.Text = PdfReaderForm.DurationRead + " Minutes";
             }
         }
-
-       
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.ExitThread();

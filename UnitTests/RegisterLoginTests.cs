@@ -1,7 +1,5 @@
 using NUnit.Framework;
 using Books.me.Resources.Controller;
-using System.Drawing;
-using MySql.Data.MySqlClient;
 
 namespace UnitTests
 {
@@ -42,6 +40,20 @@ namespace UnitTests
             string expected = "T+4Ai6O3CR0kJYxCgXy2jA==";
 
             Assert.AreEqual(expected, LoginForm.EncryptString(key, password));
+        }
+        [Test]
+        public void GetCurrentUserInfoTest()
+        {
+            string password = "admin";
+            string username = "admin";
+
+            LoginForm loginForm = new LoginForm();
+            loginForm.IsLogin(username, password);
+            loginForm.GetCurrentUserInfo();
+            
+            int expectedId = 12;
+
+            Assert.AreEqual(expectedId, 12);
         }
     }
 }

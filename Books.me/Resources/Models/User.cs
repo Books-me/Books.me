@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Books.me.Resources.Models
 {
-    internal class User
+    public class User
     {
         private string username;
         private string password;
