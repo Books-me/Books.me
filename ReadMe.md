@@ -17,8 +17,8 @@
   - [x] Book reader (PDF / no UI)
   - [x] Reading time
   - [x] Completed UI
- - [ ] UNIT testing
-- [ ] Installation
+ - [x] UNIT testing
+- [x] Installation
 - [ ] Documentation
 - [ ] Presentation
 
@@ -46,11 +46,11 @@ Work In Progress
   The quickest way to get started with *Your **Books.Me** organizer* is to install our executable file from the link [above]() as shown below:
 
   Install the executable via the installation Wizard:
-[![FirstStepInstallation]()](www.example.com)
-[![SecondStepInstallation]()](www.example.com)
-[![ThirdStepInstallation]()](www.example.com)
+[![FirstStepInstallation]()](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/FirstStepInstallation.png)
+[![SecondStepInstallation]()](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/SecondStepInstallation.png)
+[![ThirdStepInstallation]()](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/ThirdStepInstallation.png)
  After you have finished installing the **Books.Me** organizer you should be met with the following screen.
-[![FinishedInstallation]()](www.example.com)
+[![FinishedInstallation]()](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/FinishedInstallation.png)
 
 
 
@@ -72,3 +72,7 @@ The current lead devs are [Ivan](https://github.com/ValWalker0304), [Damian](htt
 
 We received positive reviews from lots of people : [Zakletiq Trezvenik](https://raw.githubusercontent.com/Books-me/Books.me/master/Images/Za%20tova%20books%20me.png)
 <sub><sup>Not actually reviewed yet!</sup></sub>
+
+## License
+
+The Book Organizer and Reader (BooksMe) content management system is released under terms of the [License](LICENSE)
