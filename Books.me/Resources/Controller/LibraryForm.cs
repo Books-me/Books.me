@@ -154,6 +154,10 @@ namespace Books.me.Resources.Controller
                     libraryBook5.Enabled = true;
                     break;
             }
+            if (booksAmount>5)
+            {
+                lblLibraryMaxed.Text = "Added books limit reached!";
+            }
         }
         private void LibraryForm_Load(object sender, EventArgs e)
         {

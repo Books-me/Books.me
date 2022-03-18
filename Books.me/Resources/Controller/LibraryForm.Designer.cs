@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblLibrary = new System.Windows.Forms.Label();
             this.lblText = new System.Windows.Forms.Label();
+            this.lblLibraryMaxed = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryBook3)).BeginInit();
@@ -136,46 +137,56 @@
             this.buttonBackToHomePage.Name = "buttonBackToHomePage";
             this.buttonBackToHomePage.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.buttonBackToHomePage.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.buttonBackToHomePage.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.buttonBackToHomePage.OverrideDefault.Border.Color1 = System.Drawing.Color.White;
             this.buttonBackToHomePage.OverrideDefault.Border.Color2 = System.Drawing.Color.White;
             this.buttonBackToHomePage.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.buttonBackToHomePage.OverrideDefault.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.buttonBackToHomePage.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.buttonBackToHomePage.OverrideDefault.Border.Rounding = 20;
             this.buttonBackToHomePage.OverrideDefault.Border.Width = 2;
             this.buttonBackToHomePage.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
             this.buttonBackToHomePage.Size = new System.Drawing.Size(300, 60);
             this.buttonBackToHomePage.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.buttonBackToHomePage.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
+            this.buttonBackToHomePage.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.buttonBackToHomePage.StateCommon.Border.Color1 = System.Drawing.Color.White;
             this.buttonBackToHomePage.StateCommon.Border.Color2 = System.Drawing.Color.White;
             this.buttonBackToHomePage.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.buttonBackToHomePage.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.buttonBackToHomePage.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.buttonBackToHomePage.StateCommon.Border.Rounding = 20;
             this.buttonBackToHomePage.StateCommon.Border.Width = 2;
             this.buttonBackToHomePage.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.buttonBackToHomePage.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.buttonBackToHomePage.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Segoe UI Emoji", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBackToHomePage.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.buttonBackToHomePage.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.buttonBackToHomePage.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
             this.buttonBackToHomePage.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
+            this.buttonBackToHomePage.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.buttonBackToHomePage.StatePressed.Border.Color1 = System.Drawing.Color.White;
             this.buttonBackToHomePage.StatePressed.Border.Color2 = System.Drawing.Color.White;
             this.buttonBackToHomePage.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.buttonBackToHomePage.StatePressed.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.buttonBackToHomePage.StatePressed.Border.Rounding = 20;
             this.buttonBackToHomePage.StatePressed.Border.Width = 2;
             this.buttonBackToHomePage.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
             this.buttonBackToHomePage.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(46)))));
+            this.buttonBackToHomePage.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.buttonBackToHomePage.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.buttonBackToHomePage.StateTracking.Border.Color2 = System.Drawing.Color.White;
             this.buttonBackToHomePage.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.buttonBackToHomePage.StateTracking.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.buttonBackToHomePage.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.buttonBackToHomePage.StateTracking.Border.Rounding = 20;
             this.buttonBackToHomePage.StateTracking.Border.Width = 2;
             this.buttonBackToHomePage.TabIndex = 20;
@@ -197,9 +208,9 @@
             // 
             this.lblLibrary.Font = new System.Drawing.Font("Nirmala UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLibrary.ForeColor = System.Drawing.Color.White;
-            this.lblLibrary.Location = new System.Drawing.Point(218, 75);
+            this.lblLibrary.Location = new System.Drawing.Point(226, 75);
             this.lblLibrary.Name = "lblLibrary";
-            this.lblLibrary.Size = new System.Drawing.Size(767, 47);
+            this.lblLibrary.Size = new System.Drawing.Size(772, 47);
             this.lblLibrary.TabIndex = 21;
             this.lblLibrary.Text = "LIBRARY";
             this.lblLibrary.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -214,12 +225,23 @@
             this.lblText.TabIndex = 23;
             this.lblText.Text = "Time Reading";
             // 
+            // lblLibraryMaxed
+            // 
+            this.lblLibraryMaxed.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLibraryMaxed.ForeColor = System.Drawing.Color.White;
+            this.lblLibraryMaxed.Location = new System.Drawing.Point(221, 146);
+            this.lblLibraryMaxed.Name = "lblLibraryMaxed";
+            this.lblLibraryMaxed.Size = new System.Drawing.Size(777, 33);
+            this.lblLibraryMaxed.TabIndex = 24;
+            this.lblLibraryMaxed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LibraryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(28)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1200, 650);
+            this.Controls.Add(this.lblLibraryMaxed);
             this.Controls.Add(this.lblText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLibrary);
@@ -261,5 +283,6 @@
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label lblLibrary;
         private System.Windows.Forms.Label lblText;
+        public System.Windows.Forms.Label lblLibraryMaxed;
     }
 }
