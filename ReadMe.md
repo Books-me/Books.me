@@ -34,9 +34,9 @@
  The quickest way to get started with *Your **Books.Me** organizer* is to install our executable file from the [repo website](https://booksme.netlify.app/) as shown below:
 ##### Install the executable via the installation Wizard:
 ---
-[![FirstStepInstallation](Images/firstStep.png)
-[![SecondStepInstallation](Images/secondStep.png)
-[![ThirdStepInstallation](Images/thirdStep.png)
+[![FirstStepInstallation](Images/firstStep.png)]
+[![SecondStepInstallation](Images/secondStep.png)]
+[![ThirdStepInstallation](Images/thirdStep.png)]
 
 ##### After you have finished installing the **Books.Me** organizer you should be met with the following screen.
 ---
