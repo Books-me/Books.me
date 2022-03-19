@@ -71,4 +71,4 @@ We received positive reviews from lots of people : [Zakletiq Trezvenik](https://
 
 ## License
 
-The Book Organizer and Reader (BooksMe) content management system is released under terms of the [License](LICENSE)
+The Book Organizer and Reader (BooksMe) content management system is released under terms of the [License](LICENSE) 
